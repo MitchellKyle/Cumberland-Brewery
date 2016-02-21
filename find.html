@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cumberland Brews | Louisville, KY</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+			<!-- Navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand nav-title" href="index.html">Cumberland Brews</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-toggle">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Our Brews</a></li>
+					<li><a href="menu.html">Our Menu</a></li>
+					<li><a href="find.html">Find Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav> <!-- End Navbar -->
+
+			<!-- Map Feature -->
+
+	<div id="map"></div>
+	
+	<script type="text/javascript">
+		function initMap() {
+			var myLatLng = {lat: 38.230884, lng: -85.705506};
+			 var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 16,
+				center: myLatLng
+			});
+
+			var marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: "Cumberland Brewery"
+			});
+		}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtuZlwBYxk3dRtsKW1OVDfxfnzBVlQxTU&callback=initMap">
+	</script>
+
+			<!-- Footer -->
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-xs-6">
+					<p class="lead">1576 Bardstown Rd.</p>
+  				<p class="lead">Louisville, KY 40205</p>
+  				<p class="lead">(502) 458-8727</p>
+				</div>
+				<div class="col-sm-4 col-xs-6">
+  				<p class="lead"><b>Hours:</b></p>
+  				<p><b>Mon - Th: 4p-11p</b></p>
+  				<p><b>Friday: 4p-1a</b></p>
+  				<p><b>Saturday: 12p-1a</b></p>
+  				<p><b>Sunday: 12p-11p</b></p>
+  			</div>
+  			<div class="col-sm-3 col-sm-offset-1">
+		  		<img src="img/cb-logo.jpg" class="img-responsive">
+  			</div>
+			</div>
+			<hr>
+  		<div class="row">
+  			<div class="col-sm-4 centered">
+  				<a href=""><img></a>
+  				<a href=""><img></a>
+  				<a href=""><img></a>
+  			</div>
+  			<div class="col-sm-4 centered">
+  				<p>&copy;2016 Cumberland Brewery</p>
+  			</div>
+  			<div class="col-sm-4 centered">
+  				<p>Mitch Sharber | Designer</p>
+  			</div>
+  		</div>
+		</div>
+	</footer>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
