@@ -1,0 +1,16 @@
+README
+
+Cumberland Brewery
+
+The folders and files associated with this README were created to be a responsive website for Cumberland Brewery.
+
+Cumberland Brewery is a local restaurant and microbrewry. Located in the heart of the Highlands in Louisville, Kentucky. Established in 2000, the pub style restaurant has provides five main-stay beers, and an assortment of seasonal beers throughout the year. They also feature a good sized menu of delicious pub fare style food.
+
+The site will feature a main page that will highlight all Cumberland Brewery has to offer. A "Brews" page that will feature the 5 main stay beers, as well as a list of the current seasonal beers. A page featuring the menu items. And finally a "Find Us" page that will have a map with the location of Cumberland Brewery marked as well as ways to connect with them through social media outlets and a signup for a newsletter.
+
+Web features included:
+- The site will be written in html, styled in css, and have interactivity add through jquery and JavaScript
+- Will be responsive to accomodate a number of devices varying in screen size and resolution
+- Use of Bootstrap css and JavaScript
+- Use of an API through Google Maps and Facebook
+- Use of Angular.js through interactivity on the menu and brews page
