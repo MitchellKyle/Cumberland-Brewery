@@ -8,13 +8,16 @@ body {
 	padding: 0;
 }
 
+body {
+	padding-top: 50px;
+}
+
 /* Find Us Styles
 =================================== */
 
 #map {
 	width: 50%;
 	height: 50%;
-	padding-top: 50px;
 }
 
 .inline {
@@ -30,5 +33,4 @@ body {
 
 .price {
 	margin-top: 10px;
->>>>>>> master
 }
