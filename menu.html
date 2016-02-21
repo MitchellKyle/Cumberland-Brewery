@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html ng-app="menu">
+<head>
+	<title>Cumberland Brews | Louisville, KY</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+			<!-- Navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand nav-title" href="index.html">Cumberland Brews</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-toggle">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Our Brews</a></li>
+					<li><a href="menu.html">Our Menu</a></li>
+					<li><a href="#">Find Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav> <!-- End Navbar -->
+
+			<!-- Angular Links -->
+	<div class="container" ng-controller="MenuController as menu">
+        <ul class="nav nav-pills">
+            <li><a href ng-click="tab = 1">Appetizers</a></li>
+            <li><a href ng-click="tab = 2">Soups &amp; Salads</a></li>
+            <li><a href ng-click="tab = 3">Main Fare</a></li>
+            <li><a href ng-click="tab = 4">Desserts</a></li>
+            <li><a href ng-click="tab = 5">Specials</a></li>
+        </ul> <!-- End Angular Links -->
+
+        	<!-- Menu Content -->
+        			<!-- Appetizers -->
+        <div class="panel" ng-show="tab === 1" ng-controller="AppetizerController as menu">
+        	<div class="container-fluid">
+		        <h1 class="text-center">Appetizers</h1>
+		        <div ng-repeat="product in menu.products">
+			        <div class="row menu-border" >
+			        	<h4 class="col-xs-9"> {{product.item}} </h4>
+			        	<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
+			        </div>
+			        <div class="row">
+				        <p class="col-xs-9"><b ng-show="product.subDescription"> {{product.subDescription}} </b> {{product.description}} </p>
+				        <p class="col-xs-2 col col-xs-offset-1 text-left" ng-show="product.secondPrice"><b> {{product.secondPrice}} </b></p>
+		        	</div>
+		        </div>
+		    	</div>
+        </div>
+
+        			<!-- Soups & Salads -->
+        <div class="panel" ng-show="tab === 2">
+        	<div class="container-fluid">
+	          <h1 class="text-center">Soups &amp; Salads</h1>
+	          <div ng-controller="SoupsSaladsController as menu">
+		          <div ng-repeat="product in menu.products">
+		          	<div class="row menu-border">
+		          		<h4 class="col-xs-9"> {{product.item}} </h4>
+		          		<p class="col-xs-2 col-xs-offset-1 text-left price" ng-show="product.price"><b> ${{product.price}} </b></p>
+		          	</div>
+		          	<div class="row">
+		            	<p class="col-xs-9"> {{product.description}} </p>
+		            	<p class="col-xs-2 col-xs-offset-1 text-left" ng-show="product.secondPrice"><b> ${{product.secondPrice}} </b></p>
+		          	</div>
+		          </div>
+	          </div>
+	          						<!-- Sides & A la Carte -->
+	          <div class="row">
+        			<div class="col-sm-6">
+        				<h2>Sides</h2>
+        				<div ng-controller="SidesController as menu">
+          				<div ng-repeat="product in menu.products">
+	          				<div class="row">
+	          					<p class="col-xs-6 col-xs-offset-1"><b> {{product.item}} </b></p>
+	          					<p class="col-xs-5"> ${{product.price}} </p>
+	          				</div>
+	          			</div>
+	          		</div>
+          		</div>
+          		<div class="col-sm-6">
+          			<h2>A La Carte</h2>
+          			<div ng-controller="CarteController as menu">
+          				<div ng-repeat="product in menu.products">
+          					<div class="row">
+          						<p class="col-xs-6 col-xs-offset-1"><b> {{product.item}} </b></p>
+          						<p class="col-xs-5"> ${{product.price}} </p>
+          					</div>
+          				</div>
+          			</div>
+          		</div>
+	          </div>
+        	</div>
+        </div>
+
+        		<!-- Main Fare -->
+        <div class="panel" ng-show="tab === 3">
+        	<div class="container-fluid">
+        		<h1 class="text-center">Main Fare</h1>
+        		<p class="text-center">All Sandwiches Served with Steak Fries, Lettuce, Tomato, Onion &amp; A Pickle Spear</p>
+        		<p class="text-center">Substitute a Side Salad, Vegetable of the Day, a Cup of Soup or Sweet Potato Fries for Steak Fries for &dollar;1.95</p>
+        		<div ng-controller="FareController as menu">
+        			<div ng-repeat="product in menu.products">
+        				<div class="row menu-border">
+        					<h4 class="col-xs-9"> {{product.item}} </h4>
+        					<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
+        				</div>
+        				<div class="row">
+        					<p class="col-xs-9"> {{product.description}} </p>
+        				</div>
+        			</div>
+        			<h2 class="text-center">Sandwich Toppings &amp; Dips</h2>
+        			<div class="row">
+        				<p class="col-xs-9">Pepper Jack, White or Yellow American, Swiss, Bleu Cheese Crumbles or Shredded Cheddar Cheese</p>
+        				<p class="col-xs-2 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
+        			</div>
+        			<div class="row">
+        				<p class="col-xs-9">Bacon, Sauteed Mushrooms, Sauteed Onions, Roasted Garlic, Jalapenos or Raw Horseradish</p>
+        				<p class="col-xs-2 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
+        			</div>
+        			<div class="row">
+        				<p class="col-xs-9">Chipotle Mayonnaise, Cilantro Sour Cream, Guacamole, Diablo Sauce, Cajun Tartar Sauce, Cinnamon Cream Cheese Dip or Bleu Cheese Dressing</p>
+        				<p class="col-xs-2 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
+        			</div>
+        			<div class="row">
+        				<p class="col-xs-9">Pickle Spear, Extra Onion or Tomato</p>
+        				<p class="col-xs-2 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
+        			</div>
+        			<div class="row">
+        				<p class="col-xs-9">Plain Mayonnaise, Bar B Q Sauce, Ranch Dressing or Honey Mustard</p>
+        				<p class="col-xs-2 col-xs-offset-1 text-left price">&dollar;0.50 Each</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+
+        		<!-- Desserts -->
+        <div class="panel" ng-show="tab === 4">
+        	<div class="container-fluid">
+        		<h1 class="text-center">Desserts</h1>
+        		<div ng-controller="DessertsController as menu">
+        			<div ng-repeat="product in menu.products">
+        				<div class="row menu-border">
+        					<h4 class="col-xs-9"> {{product.item}} </h4>
+        					<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
+        				</div>
+        				<div class="row">
+        					<p class="col-xs-9"> {{product.description}} </p>
+        				</div>
+        			</div>
+	        	</div>
+	        </div>
+	       </div>
+
+	       		<!-- Specials -->
+        <div class="panel" ng-show="tab === 5">
+        	<div class="container-fluid">
+        		<h1 class="text-center">Specials</h1>
+        		<div class="row">
+        			<div class="col-sm-6">
+        				<h2>Weekly Specials</h2>
+        				<p class="col-sm-offset-1"><b>Monday:</b> $5 Growlers</p>
+        				<p class="col-sm-offset-1"><b>Tuesday:</b> $2.75 Pint Night</p>
+        				<p class="col-sm-offset-1"><b>Thursday:</b> $12 Steak and Beer</p>
+        			</div>
+        			<div class="col-sm-6">
+        				<h2>Daily Specials</h2>
+        				<p class="col-sm-offset-1">Appetizer of the Day</p>
+        				<p class="col-sm-offset-1">Quesadilla of the Day</p>
+        				<p class="col-sm-offset-1">Dinner of the Day</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div> <!-- End Menu Content -->
+
+			<!-- Footer -->
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-xs-6">
+					<p class="lead">1576 Bardstown Rd.</p>
+  				<p class="lead">Louisville, KY 40205</p>
+  				<p class="lead">(502) 458-8727</p>
+				</div>
+				<div class="col-sm-4 col-xs-6">
+  				<p class="lead"><b>Hours:</b></p>
+  				<p><b>Mon - Th: 4p-11p</b></p>
+  				<p><b>Friday: 4p-1a</b></p>
+  				<p><b>Saturday: 12p-1a</b></p>
+  				<p><b>Sunday: 12p-11p</b></p>
+  			</div>
+  			<div class="col-sm-3 col-sm-offset-1">
+		  		<img src="img/cb-logo.jpg" class="img-responsive">
+  			</div>
+			</div>
+			<hr>
+  		<div class="row">
+  			<div class="col-sm-4 centered">
+  				<a href=""><img></a>
+  				<a href=""><img></a>
+  				<a href=""><img></a>
+  			</div>
+  			<div class="col-sm-4 centered">
+  				<p>&copy;2016 Cumberland Brewery</p>
+  			</div>
+  			<div class="col-sm-4 centered">
+  				<p>Mitch Sharber | Designer</p>
+  			</div>
+  		</div>
+		</div>
+	</footer>
+</body>
+</html>
