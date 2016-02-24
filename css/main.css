@@ -12,6 +12,43 @@ body {
 	padding-top: 50px;
 }
 
+.container-fluid {
+	max-width: 1000px;
+}
+
+/* Navbar Styles
+=================================== */
+
+.navbar-inverse {
+	background-color: #303e47;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav li a {
+	color: #ed5031;
+}
+
+.navbar-inverse .navbar-brand {
+	font-size: 20px;
+}
+
+.navbar-inverse .navbar-nav li a {
+	font-size: 16px;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+	color: #ed5031;
+	background-color: #253037;
+}
+
+#selected  {
+	background-color: #253037;
+}
+
+.navbar-toggle:hover {
+	background-color: #253037;
+}
+
 /* Find Us Styles
 =================================== */
 
