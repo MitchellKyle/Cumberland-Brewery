@@ -10,10 +10,15 @@ body {
 
 body {
 	padding-top: 50px;
+	font-size: 1.6em;
 }
 
 .container-fluid {
 	max-width: 1000px;
+}
+
+.center-align {
+	margin: 0 auto;
 }
 
 /* Navbar Styles
@@ -45,8 +50,53 @@ body {
 	background-color: #253037;
 }
 
+hr {
+	margin: 0;
+}
+
 .navbar-toggle:hover {
 	background-color: #253037;
+}
+
+/* Footer Styles
+=================================== */
+
+#main-footer {
+	color: #fff;
+	background-color: #253037;
+	padding: 2em 0;
+}
+
+#main-footer .lead {
+	margin-bottom: 10px;
+}
+
+#main-footer a {
+	display: block;
+	color: #fff;
+	margin-top: 2em;
+}
+
+.cb-logo {
+	width: 20%;
+	border-radius: 50%;
+	margin: 1em auto 0;
+}
+
+#sub-footer {
+	color: #fff;
+	background-color: #1b2227;
+	padding: 1.5em 0;
+}
+
+#sub-footer p {
+	margin: 0;
+}
+
+.social-icon {
+	border: 1px solid #fff;
+	border-radius: 5px;
+	margin: 0 3px;
 }
 
 /* Find Us Styles
@@ -71,3 +121,18 @@ body {
 .price {
 	margin-top: 10px;
 }
+
+/* Media Queries
+=========================================================================================
+========================================================================================= */
+
+@media (min-width: 767px) {
+
+	/* Footer Styles
+	=================================== */
+
+	.cb-logo {
+		width: 60%;
+	}
+}
+
