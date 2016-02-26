@@ -80,6 +80,7 @@ hr {
 	display: block;
 	color: #fff;
 	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
 .cb-logo {
@@ -127,6 +128,13 @@ hr {
 	margin-top: 10px;
 }
 
+.nav-pills {
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 /* Media Queries
 =========================================================================================
 ========================================================================================= */
@@ -139,5 +147,17 @@ hr {
 	.cb-logo {
 		width: 65%;
 	}
+
+	/* Menu Styles
+	=================================== */
+
+	.nav-pills li a {
+		margin: 0 .5em;
+		border: 1px solid 
+	}
+}
+
+.fb-page {
+	height: 300px;
 }
 
