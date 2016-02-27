@@ -44,8 +44,17 @@
 		</div>
 	</nav> <!-- End Navbar -->
 
+  <div id="menu-header">
+    <div class="sr-only">Picture of a plate of steak topped with mushrooms and an onion ring, with a side of french fries, and a beer to drink.</div>
+  </div>
+
+  <div class="container-fluid" id="menu-welcome">
+    <h1>Cumberland Brewery Menu</h1>
+    <p class="lead">Come for the beer, stay for the food! Our American style pub grub goes well with any of our brews. Check out our full menu with food prepared so well, that we are sure you will leave satisfied and will be coming back for more!</p>
+  </div>
+
 			<!-- Angular Links -->
-	<div class="container" ng-controller="MenuController as menu">
+	<div class="container-fluid" ng-controller="MenuController as menu">
     <ul class="nav nav-pills">
         <li><a href ng-click="tab = 1">Appetizers</a></li>
         <li><a href ng-click="tab = 2">Soups &amp; Salads</a></li>
@@ -61,7 +70,7 @@
     	<div class="container-fluid">
         <h1 class="text-center">Appetizers</h1>
         <div ng-repeat="product in menu.products">
-	        <div class="row menu-border" >
+	        <div class="row menu-items" >
 	        	<h4 class="col-xs-9"> {{product.item}} </h4>
 	        	<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
 	        </div>
@@ -79,7 +88,7 @@
         <h1 class="text-center">Soups &amp; Salads</h1>
         <div ng-controller="SoupsSaladsController as menu">
           <div ng-repeat="product in menu.products">
-          	<div class="row menu-border">
+          	<div class="row menu-items">
           		<h4 class="col-xs-9"> {{product.item}} </h4>
           		<p class="col-xs-2 col-xs-offset-1 text-left price" ng-show="product.price"><b> ${{product.price}} </b></p>
           	</div>
@@ -125,7 +134,7 @@
     		<p class="text-center">Substitute a Side Salad, Vegetable of the Day, a Cup of Soup or Sweet Potato Fries for Steak Fries for &dollar;1.95</p>
     		<div ng-controller="FareController as menu">
     			<div ng-repeat="product in menu.products">
-    				<div class="row menu-border">
+    				<div class="row menu-items">
     					<h4 class="col-xs-9"> {{product.item}} </h4>
     					<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
     				</div>
@@ -133,7 +142,7 @@
     					<p class="col-xs-9"> {{product.description}} </p>
     				</div>
     			</div>
-    			<h2 class="text-center">Sandwich Toppings &amp; Dips</h2>
+    			<h2 class="text-center" id="sand-toppings">Sandwich Toppings &amp; Dips</h2>
     			<div class="row">
     				<p class="col-xs-9">Pepper Jack, White or Yellow American, Swiss, Bleu Cheese Crumbles or Shredded Cheddar Cheese</p>
     				<p class="col-xs-2 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
@@ -164,7 +173,7 @@
     		<h1 class="text-center">Desserts</h1>
     		<div ng-controller="DessertsController as menu">
     			<div ng-repeat="product in menu.products">
-    				<div class="row menu-border">
+    				<div class="row menu-items">
     					<h4 class="col-xs-9"> {{product.item}} </h4>
     					<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
     				</div>
@@ -182,16 +191,16 @@
     		<h1 class="text-center">Specials</h1>
     		<div class="row">
     			<div class="col-sm-6">
-    				<h2>Weekly Specials</h2>
-    				<p class="col-sm-offset-1"><b>Monday:</b> $5 Growlers</p>
-    				<p class="col-sm-offset-1"><b>Tuesday:</b> $2.75 Pint Night</p>
-    				<p class="col-sm-offset-1"><b>Thursday:</b> $12 Steak and Beer</p>
+    				<h2 class="text-center special-header">Weekly Specials</h2>
+    				<p class="text-center"><b>Monday:</b> $5 Growlers</p>
+    				<p class="text-center"><b>Tuesday:</b> $2.75 Pint Night</p>
+    				<p class="text-center"><b>Thursday:</b> $12 Steak and Beer</p>
     			</div>
     			<div class="col-sm-6">
-    				<h2>Daily Specials</h2>
-    				<p class="col-sm-offset-1">Appetizer of the Day</p>
-    				<p class="col-sm-offset-1">Quesadilla of the Day</p>
-    				<p class="col-sm-offset-1">Dinner of the Day</p>
+    				<h2 class="text-center special-header">Daily Specials</h2>
+    				<p class="text-center">Appetizer of the Day</p>
+    				<p class="text-center">Quesadilla of the Day</p>
+    				<p class="text-center">Dinner of the Day</p>
     			</div>
     		</div>
     	</div>

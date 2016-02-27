@@ -44,23 +44,70 @@
 	</nav> <!-- End Navbar -->
 
 			<!-- Map Feature -->
+	<div class="container-fluid" id="map-container">
+		<div id="map"></div>
+		<p>*Click on marker to automatically zoom in.</p>
+	</div>
 
-	<div id="map"></div>
-	
 	<script type="text/javascript">
-		function initMap() {
-			var myLatLng = {lat: 38.230884, lng: -85.705506};
-			 var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 16,
-				center: myLatLng
-			});
+	var map;
+	var cumberland = {lat: 38.230884, lng: -85.705506};
+	function CenterControl(controlDiv, map) {
 
-			var marker = new google.maps.Marker({
-				position: myLatLng,
-				map: map,
-				title: "Cumberland Brewery"
-			});
-		}
+	  // Set CSS for the control border.
+	  var controlUI = document.createElement('div');
+	  controlUI.style.backgroundColor = '#fff';
+	  controlUI.style.border = '2px solid #fff';
+	  controlUI.style.borderRadius = '3px';
+	  controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+	  controlUI.style.cursor = 'pointer';
+	  controlUI.style.marginBottom = '22px';
+	  controlUI.style.textAlign = 'center';
+	  controlUI.title = 'Click to recenter the map';
+	  controlDiv.appendChild(controlUI);
+
+	  // Set CSS for the control interior.
+	  var controlText = document.createElement('div');
+	  controlText.style.color = 'rgb(25,25,25)';
+	  controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+	  controlText.style.fontSize = '16px';
+	  controlText.style.lineHeight = '38px';
+	  controlText.style.paddingLeft = '5px';
+	  controlText.style.paddingRight = '5px';
+	  controlText.innerHTML = 'Center Map';
+	  controlUI.appendChild(controlText);
+
+	  controlUI.addEventListener('click', function() {
+	    map.setCenter(cumberland);
+	  });
+	}
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 11,
+    center: cumberland
+  });
+
+  // Create the DIV to hold the control and call the CenterControl()
+  // constructor passing in this DIV.
+  var centerControlDiv = document.createElement('div');
+  var centerControl = new CenterControl(centerControlDiv, map);
+
+  centerControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(centerControlDiv);
+
+  var marker = new google.maps.Marker({
+			position: cumberland,
+			map: map,
+			title: "Cumberland Brewery"
+		});
+
+  marker.addListener('click', function() {
+	    map.setZoom(17);
+	    map.setCenter(marker.getPosition());
+	  });
+	}
+		
 	</script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtuZlwBYxk3dRtsKW1OVDfxfnzBVlQxTU&callback=initMap">
 	</script>
