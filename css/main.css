@@ -9,7 +9,6 @@ body {
 }
 
 body {
-	padding-top: 50px;
 	font-size: 1.6em;
 }
 
@@ -25,7 +24,7 @@ body {
 =================================== */
 
 .navbar-inverse {
-	background-color: #303e47;
+	background-color: rgba(48,62,71, .9);
 }
 
 .navbar-inverse .navbar-brand,
@@ -47,7 +46,7 @@ body {
 }
 
 #selected  {
-	background-color: #253037;
+	background-color: rgba(37,48,55, .9);
 }
 
 hr {
@@ -109,7 +108,7 @@ hr {
 =================================== */
 
 #menu-header {
-	height: 450px;
+	height: 500px;
 	width: 100%;
 	background: url('../img/menu-header.png') no-repeat center;
 	background-size: cover;
