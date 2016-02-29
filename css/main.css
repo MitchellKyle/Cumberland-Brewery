@@ -24,7 +24,7 @@ body {
 =================================== */
 
 .navbar-inverse {
-	background-color: rgba(48,62,71, .9);
+	background-color: rgba(37,48,55, .9);
 }
 
 .navbar-inverse .navbar-brand,
@@ -42,11 +42,11 @@ body {
 
 .navbar-inverse .navbar-nav li a:hover {
 	color: #ed5031;
-	background-color: #253037;
+	background-color: #1b2227;
 }
 
 #selected  {
-	background-color: rgba(37,48,55, .9);
+	background-color: #1b2227;
 }
 
 hr {
@@ -103,6 +103,11 @@ hr {
 	border-radius: 5px;
 	margin: 0 3px;
 }
+
+/* Home Styles
+=================================== */
+
+
 
 /* Menu Styles
 =================================== */
