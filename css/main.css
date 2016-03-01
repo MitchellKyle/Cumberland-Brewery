@@ -16,6 +16,12 @@ hr {
 	margin: 0;
 }
 
+.break {
+	border: 3px solid #1b2227;
+	margin-top: 2em;
+	margin-bottom: 4em;
+}
+
 .container-fluid {
 	max-width: 1000px;
 }
@@ -34,17 +40,21 @@ hr {
 
 .button {
 	padding: .5em;
-	color: #ed5031;
+	color: #fff;
 	font-size: 1.5em;
-	background-color: #253037;
-	border: 1px solid #1b2227;
+	background-color: rgba(37,48,55, .8);
 	border-radius: 5px;
+	border-bottom: 5px solid #253037;
 }
 
 .button:hover {
 	color: #ed5031;
 	text-decoration: none;
-	background-color: #1b2227;
+	background-color: rgba(37,48,55,.9);
+}
+
+.button:active {
+	border-bottom: 1px solid #253037;
 }
 
 /* Pics & Icon Styles
@@ -87,11 +97,11 @@ hr {
 }
 
 .navbar-inverse .navbar-brand {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 .navbar-inverse .navbar-nav li a {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .navbar-inverse .navbar-nav li a:hover {
@@ -149,11 +159,13 @@ hr {
 }
 
 .home-feature {
-	background-color: rgba(68,88,101,.5);
+	background-color: rgba(68,88,101,.4);
 }
 
 .home-feature h2 {
 	font-size: 2.5em;
+	text-shadow: 1px 1px 1px #1b2227;
+	color: #ed5031;
 }
 
 /* Menu Styles
@@ -178,6 +190,7 @@ hr {
 }
 
 .nav-pills li a {
+	font-size: 1.25em;
 	border: 1px solid #303e47;
 	background-color: #1b2227;
 	color: #fff;
