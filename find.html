@@ -46,69 +46,62 @@
 			<!-- Map Feature -->
 	<div class="container-fluid" id="map-container">
 		<div id="map"></div>
-		<p>*Click on marker to automatically zoom in.</p>
+		<div id="directions-widget">
+      <strong>Cumberland Brewery</strong>
+      <p>1576 Bardstown Rd, Louisville, KY 40205</p>
+
+      	<div class="navigate">
+      		<a target="_blank" href="https://www.google.com/maps/dir//Cumberland+Brewery,+Bardstown+Road,+Louisville,+KY/@38.2308503,-85.7230165,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e!2m2!1d-85.7055049!2d38.2308711?hl=en">
+      			<div><img class=" navigate-icon" src="img/navigate.png" alt="Logo depicting arrows representing the directions link."></div>
+      			<div class="navigate-text">Directions</div>
+      		</a>
+      	</div>
+
+      	<div>
+      		<a target="_blank" href="https://www.google.com/maps/place/Cumberland+Brewery/@38.2308711,-85.7230144,14z/data=!4m2!3m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e?hl=en" jsaction="mouseup:placeCard.largerMap" class="navigate-text">View larger map</a>
+      	</div>
+      	<a target="_blank" class="send-to-device-button" style="display:none">Send to device</a>
+    </div>
+    <script>
+      var cumberland = {lat: 38.230884, lng: -85.705506};
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: cumberland,
+          mapTypeControlOptions: {
+            mapTypeIds: [
+              google.maps.MapTypeId.ROADMAP,
+              google.maps.MapTypeId.SATELLITE
+            ],
+            position: google.maps.ControlPosition.BOTTOM_LEFT
+          }
+        });
+
+        var widgetDiv = document.getElementById('directions-widget');
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(widgetDiv);
+
+        // Append a Save Control to the existing save-widget div.
+        var saveWidget = new google.maps.SaveWidget(widgetDiv, {
+          place: {
+            // ChIJN1t_tDeuEmsRUsoyG83frY4 is the place Id for Google Sydney.
+            placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
+            location: cumberland
+          },
+          attribution: {
+            source: 'Google Maps JavaScript API',
+            webUrl: 'https://developers.google.com/maps/'
+          }
+        });
+
+        var marker = new google.maps.Marker({
+          map: map,
+          position: saveWidget.getPlace().location
+        });
+      }
+    </script>
 	</div>
 
-	<script type="text/javascript">
-	var map;
-	var cumberland = {lat: 38.230884, lng: -85.705506};
-	function CenterControl(controlDiv, map) {
-
-	  // Set CSS for the control border.
-	  var controlUI = document.createElement('div');
-	  controlUI.style.backgroundColor = '#fff';
-	  controlUI.style.border = '2px solid #fff';
-	  controlUI.style.borderRadius = '3px';
-	  controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
-	  controlUI.style.cursor = 'pointer';
-	  controlUI.style.marginBottom = '22px';
-	  controlUI.style.textAlign = 'center';
-	  controlUI.title = 'Click to recenter the map';
-	  controlDiv.appendChild(controlUI);
-
-	  // Set CSS for the control interior.
-	  var controlText = document.createElement('div');
-	  controlText.style.color = 'rgb(25,25,25)';
-	  controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
-	  controlText.style.fontSize = '16px';
-	  controlText.style.lineHeight = '38px';
-	  controlText.style.paddingLeft = '5px';
-	  controlText.style.paddingRight = '5px';
-	  controlText.innerHTML = 'Center Map';
-	  controlUI.appendChild(controlText);
-
-	  controlUI.addEventListener('click', function() {
-	    map.setCenter(cumberland);
-	  });
-	}
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 11,
-    center: cumberland
-  });
-
-  // Create the DIV to hold the control and call the CenterControl()
-  // constructor passing in this DIV.
-  var centerControlDiv = document.createElement('div');
-  var centerControl = new CenterControl(centerControlDiv, map);
-
-  centerControlDiv.index = 1;
-  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(centerControlDiv);
-
-  var marker = new google.maps.Marker({
-			position: cumberland,
-			map: map,
-			title: "Cumberland Brewery"
-		});
-
-  marker.addListener('click', function() {
-	    map.setZoom(17);
-	    map.setCenter(marker.getPosition());
-	  });
-	}
-		
-	</script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtuZlwBYxk3dRtsKW1OVDfxfnzBVlQxTU&callback=initMap">
 	</script>
 
@@ -145,9 +138,9 @@ function initMap() {
 		<div class="container-fluid">
   		<div class="row">
   			<div class="col-sm-4 text-center">
-  				<a href="https://www.facebook.com/pages/Cumberland-Brews/236531969737103"><img src="fonts/facebook.png" alt="Facebook social media icon" class="social-icon"></a>
-  				<a href="http://www.yelp.com/biz/cumberland-brews-louisville"><img src="fonts/yelp.png" alt="Yelp social media icon" class="social-icon"></a>
-  				<a href="https://untappd.com/CumberlandBrewery"><img src="fonts/untappd.png" alt="Untappd social media icon" class="social-icon"></a>
+  				<a target="_blank" href="https://www.facebook.com/pages/Cumberland-Brews/236531969737103"><img src="fonts/facebook.png" alt="Facebook social media icon" class="social-icon"></a>
+  				<a target="_blank" href="http://www.yelp.com/biz/cumberland-brews-louisville"><img src="fonts/yelp.png" alt="Yelp social media icon" class="social-icon"></a>
+  				<a target="_blank" href="https://untappd.com/CumberlandBrewery"><img src="fonts/untappd.png" alt="Untappd social media icon" class="social-icon"></a>
   			</div>
   			<div class="col-sm-4 text-center">
   				<p>&copy;2016 Cumberland Brewery</p>
