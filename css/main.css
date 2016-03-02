@@ -30,12 +30,46 @@ hr {
 	margin: 0 auto;
 }
 
+/* Navbar Styles
+=================================== */
+
+.navbar-inverse {
+	background-color: rgba(37,48,55, .9);
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav li a {
+	color: #ed5031;
+}
+
+.navbar-inverse .navbar-brand {
+	font-size: 22px;
+}
+
+.navbar-inverse .navbar-nav li a {
+	font-size: 18px;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+	color: #ed5031;
+	background-color: #1b2227;
+}
+
+#selected  {
+	background-color: #1b2227;
+}
+
+.navbar-toggle:hover {
+	background-color: #253037;
+}
+
 /* Button Styles
 =================================== */
 
-.feature-button{
+.feature-button {
 	text-align: center;
-	margin-top: 4em;
+	margin-top: 3em;
+	margin-bottom: 2em;
 }
 
 .button {
@@ -88,39 +122,6 @@ hr {
 	width: 50px;
 }
 
-/* Navbar Styles
-=================================== */
-
-.navbar-inverse {
-	background-color: rgba(37,48,55, .9);
-}
-
-.navbar-inverse .navbar-brand,
-.navbar-inverse .navbar-nav li a {
-	color: #ed5031;
-}
-
-.navbar-inverse .navbar-brand {
-	font-size: 22px;
-}
-
-.navbar-inverse .navbar-nav li a {
-	font-size: 18px;
-}
-
-.navbar-inverse .navbar-nav li a:hover {
-	color: #ed5031;
-	background-color: #1b2227;
-}
-
-#selected  {
-	background-color: #1b2227;
-}
-
-.navbar-toggle:hover {
-	background-color: #253037;
-}
-
 /* Footer Styles
 =================================== */
 
@@ -154,14 +155,6 @@ hr {
 /* Home Styles
 =================================== */
 
-.break {
-
-}
-
-#welcome-feature {
-
-}
-
 .home-feature {
 	background-color: rgba(68,88,101,.4);
 }
@@ -170,6 +163,50 @@ hr {
 	font-size: 2.5em;
 	text-shadow: 1px 1px 1px #1b2227;
 	color: #ed5031;
+}
+
+.find-feature {
+	background: url('../img/bg.png');
+	padding-top: 3em;
+	padding-bottom: 3em;
+	margin-bottom: 3em;
+}
+
+/* Map Styles
+=================================== */
+
+#map {
+	margin-top: 3em;
+	margin-left: 3em;
+	width: 60%;
+	height: 350px;
+}
+
+#directions-widget {
+	width: 325px;
+	box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+	background-color: white;
+	padding: 10px;
+	font-family: Roboto, Arial;
+	font-size: 13px;
+	margin: 15px;
+}
+
+.navigate {
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.navigate-text {
+	color: #1b2227;
+}
+
+.navigate-text:hover {
+	color: #1b2227;
 }
 
 /* Menu Styles
@@ -224,48 +261,6 @@ hr {
 
 .special-header {
 	margin-bottom: 1em;
-}
-
-/* Find Us Styles
-=================================== */
-
-#map-container {
-	margin-top: 50px;
-}
-
-.inline {
-	display: inline-block;
-}
-
-#map {
-	width: 80%;
-	height: 450px;
-}
-#directions-widget {
-	width: 325px;
-	box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
-	background-color: white;
-	padding: 10px;
-	font-family: Roboto, Arial;
-	font-size: 13px;
-	margin: 15px;
-}
-
-.navigate {
-	display: inline-block;
-	margin-left: 5px;
-	margin-right: 5px;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-}
-
-.navigate-text {
-	color: #1b2227;
-}
-
-.navigate-text:hover {
-	color: #1b2227;
 }
 
 /* Media Queries

@@ -100,24 +100,90 @@
 	<hr class="break">
 
 			<!-- Food Feature -->
-		<div class="container-fluid">
-			<div class="jumbotron home-feature">
-				<div class="row">
-					<div class="col-sm-5">
-						<h2>Cumberland's Grub</h2>
-						<p class="lead">Need to wash down your beer with a little food? Check out our menu! It is full of all kinds of delicious pub grub!</p>
-						<div class="feature-button">
-							<a href="menu.html" class="button">Our Menu</a>
-						</div>
-					</div>
-					<div class="col-sm-7">
-						<img class="img-responsive img-rounded" src="img/dining-room.png">
+	<div class="container-fluid">
+		<div class="jumbotron home-feature">
+			<div class="row">
+				<div class="col-sm-7 col-sm-push-5">
+					<img class="img-responsive img-rounded" src="img/dining-room.png">
+				</div>
+				<div class="col-sm-5 col-sm-pull-7">
+					<h2>Cumberland's Grub</h2>
+					<p class="lead">Need to wash down your beer with a little food? Check out our menu! It is full of all kinds of delicious pub grub!</p>
+					<div class="feature-button">
+						<a href="menu.html" class="button">Our Menu</a>
 					</div>
 				</div>
 			</div>
-		</div> 
+		</div>
+	</div> 
 
-			
+			<!-- Find Us Feature -->
+	<div class="container-fluid">
+		<div class="find-feature">
+		<div class="empty"></div>
+
+					<!-- Map Feature -->
+			<div id="map"></div>
+			<div id="directions-widget">
+	      <strong>Cumberland Brewery</strong>
+	      <p>1576 Bardstown Rd, Louisville, KY 40205</p>
+				<div class="navigate">
+      		<a target="_blank" href="https://www.google.com/maps/dir//Cumberland+Brewery,+Bardstown+Road,+Louisville,+KY/@38.2308503,-85.7230165,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e!2m2!1d-85.7055049!2d38.2308711?hl=en">
+      			<div><img class=" navigate-icon" src="img/navigate.png" alt="Logo depicting arrows representing the directions link."></div>
+      			<div class="navigate-text">Directions</div>
+      		</a>
+      	</div>
+      	<div>
+      		<a target="_blank" href="https://www.google.com/maps/place/Cumberland+Brewery/@38.2308711,-85.7230144,14z/data=!4m2!3m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e?hl=en" jsaction="mouseup:placeCard.largerMap" class="navigate-text">View larger map</a>
+      	</div>
+      	<a target="_blank" class="send-to-device-button" style="display:none">Send to device</a>
+	    </div>
+
+	    <!-- Maps API Settings -->
+    <script>
+      var cumberland = {lat: 38.230884, lng: -85.705506};
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: cumberland,
+          mapTypeControlOptions: {
+            mapTypeIds: [
+              google.maps.MapTypeId.ROADMAP,
+              google.maps.MapTypeId.SATELLITE
+            ],
+            position: google.maps.ControlPosition.BOTTOM_LEFT
+          }
+        });
+
+        var widgetDiv = document.getElementById('directions-widget');
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(widgetDiv);
+
+        // Append a Save Control to the existing save-widget div.
+        var saveWidget = new google.maps.SaveWidget(widgetDiv, {
+          place: {
+            // ChIJN1t_tDeuEmsRUsoyG83frY4 is the place Id for Google Sydney.
+            placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
+            location: cumberland
+          },
+          attribution: {
+            source: 'Google Maps JavaScript API',
+            webUrl: 'https://developers.google.com/maps/'
+          }
+        });
+
+        var marker = new google.maps.Marker({
+          map: map,
+          position: saveWidget.getPlace().location
+        });
+      }
+    </script> <!-- End Maps API Settings -->
+    </div>
+	</div> <!-- End Find Feature -->
+
+			<!-- Google Maps API Loading Script -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtuZlwBYxk3dRtsKW1OVDfxfnzBVlQxTU&callback=initMap">
+	</script>
 
 			<!-- Footer -->
 	<footer>
