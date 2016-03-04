@@ -122,13 +122,10 @@ hr {
 	background-size: cover;
 }
 
-#brews-header {
-	height: 500px;
-	width: 100%;
-}
-
 /* Layout Styles
 =================================== */
+
+/*Home Page*/
 
 .home-feature {
 	background-color: rgba(68,88,101,.4);
@@ -139,6 +136,8 @@ hr {
 	text-shadow: 1px 1px 1px #1b2227;
 	color: #ed5031;
 }
+
+/*Find Feature*/
 
 .find-feature {
 	/*background: url('../img/bg.png');*/
@@ -157,51 +156,11 @@ hr {
 	margin: 1em 0;
 }
 
-/* Map Styles
-=================================== */
+/*Brew & Menu Pages*/
 
-#map {
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 3em;
-	width: 95%;
-	height: 400px;
+.page-header-img {
+	width: 100%;
 }
-
-#directions-widget {
-	width: 325px;
-	box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
-	background-color: white;
-	padding: 10px;
-	font-family: Roboto, Arial;
-	font-size: 13px;
-	margin: 15px;
-}
-
-.navigate {
-	display: inline-block;
-	margin-left: 5px;
-	margin-right: 5px;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-}
-
-.navigate-text {
-	color: #1b2227;
-}
-
-.navigate-text:hover {
-	color: #1b2227;
-}
-
-/* Brews Styles
-=================================== */
-
-
-
-/* Menu Styles
-=================================== */
 
 .page-welcome {
 	margin-top: 2em;
@@ -213,6 +172,33 @@ hr {
 	margin-bottom: .75em;
 	font-size: 3em;
 }
+
+/*Brew Page*/
+
+.brew-feature {
+	margin-bottom: 4em;
+}
+
+.brew-subtitle {
+	padding-bottom: .25em;
+	color: #ed5031;
+	border-bottom: 2px solid #1b2227;
+}
+
+.brew-desc {
+	margin: 3em 1em;
+}
+
+.brew-desc p {
+	margin-left: .5em;
+}
+
+.coming-soon .brew-name {
+	margin-top: 1em;
+	margin-left: .5em;
+}
+
+/*Menu Page*/
 
 .nav-pills {
 	display: flex;
@@ -254,6 +240,44 @@ hr {
 	margin-bottom: 1em;
 }
 
+/* Map Styles
+=================================== */
+
+#map {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 3em;
+	width: 95%;
+	height: 400px;
+}
+
+#directions-widget {
+	width: 325px;
+	box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+	background-color: white;
+	padding: 10px;
+	font-family: Roboto, Arial;
+	font-size: 13px;
+	margin: 15px;
+}
+
+.navigate {
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.navigate-text {
+	color: #1b2227;
+}
+
+.navigate-text:hover {
+	color: #1b2227;
+}
+
 /* Footer Styles
 =================================== */
 
@@ -290,13 +314,6 @@ hr {
 
 @media (min-width: 767px) {
 
-	/* Footer Styles
-	=================================== */
-
-	.cb-logo {
-		width: 65%;
-	}
-
 	/* Menu Styles
 	=================================== */
 
@@ -306,6 +323,13 @@ hr {
 
 	#map {
 		width: 500px;
+	}
+
+	/* Footer Styles
+	=================================== */
+
+	.cb-logo {
+		width: 65%;
 	}
 }
 
