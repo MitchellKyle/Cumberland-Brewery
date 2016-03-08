@@ -12,6 +12,17 @@ body {
 	font-size: 1.6em;
 }
 
+h1,
+h2 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+}
+
+p,
+a {
+	font-family: 'Lora', serif;
+}
+
 hr {
 	margin: 0;
 }
@@ -43,11 +54,11 @@ hr {
 }
 
 .navbar-inverse .navbar-brand {
-	font-size: 22px;
+	font-size: 24px;
 }
 
 .navbar-inverse .navbar-nav li a {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .navbar-inverse .navbar-nav li a:hover {
@@ -122,10 +133,18 @@ hr {
 	background-size: cover;
 }
 
+.board {
+	box-shadow: 3px 3px 15px 2px #000;
+}
+
 /* Layout Styles
 =================================== */
 
 /*Home Page*/
+
+#welcome-feature {
+	background-color: transparent;
+}
 
 .home-feature {
 	background-color: rgba(68,88,101,.4);
@@ -140,7 +159,6 @@ hr {
 /*Find Feature*/
 
 .find-feature {
-	/*background: url('../img/bg.png');*/
 	background-color: rgba(68,88,101,.4);
 	padding-top: 2em;
 	padding-bottom: 3em;
@@ -148,7 +166,18 @@ hr {
 	margin-top: 3em;
 }
 
+.find-feature h1 {
+	margin-bottom: 1em;
+	font-size: 2.5em;
+	text-shadow: 1px 1px 1px #1b2227;
+	color: #ed5031;
+}
+
 .find-header {
+	margin-bottom: 3em;
+}
+
+.fb-page {
 	margin-bottom: 3em;
 }
 
@@ -163,8 +192,6 @@ hr {
 }
 
 .page-welcome {
-	margin-top: 2em;
-	margin-bottom: 2em;
 	background: transparent;
 }
 
@@ -175,7 +202,7 @@ hr {
 
 /*Brew Page*/
 
-.brew-feature {
+.page-feature {
 	margin-bottom: 4em;
 }
 
@@ -189,7 +216,12 @@ hr {
 	margin: 3em 1em;
 }
 
+.brew-name {
+	margin-bottom: .75em;
+}
+
 .brew-desc p {
+	font-size: 1.2em;
 	margin-left: .5em;
 }
 
@@ -202,9 +234,14 @@ hr {
 
 .nav-pills {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	margin-top: 1em;
 	margin-bottom: 4em;
+}
+
+.nav-pills li {
+	margin-top: .5em;
 }
 
 .nav-pills li a {
@@ -220,6 +257,10 @@ hr {
 
 .nav-pills li a:focus {
 	background-color: #303e47;
+}
+
+.menu p {
+	font-size: 1.2em;
 }
 
 .menu-items {
@@ -314,6 +355,18 @@ hr {
 
 @media (min-width: 767px) {
 
+	/* Layout Styles
+	=================================== */
+
+	#welcome-feature h1 {
+		margin-bottom: .75em;
+		font-size: 4.5em;
+	}
+
+	.jumbotron p {
+		font-size: 1.5em;
+	}
+
 	/* Menu Styles
 	=================================== */
 
@@ -333,3 +386,14 @@ hr {
 	}
 }
 
+@media (min-width: 991px) {
+	#map {
+		width: 470px;
+		height: 450px;
+	}
+
+	.fb-logo {
+		width: 400px;
+		height: 450px;
+	}
+}

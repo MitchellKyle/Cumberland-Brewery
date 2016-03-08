@@ -4,6 +4,7 @@
 	<title>Cumberland Brews | Louisville, KY</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Lora:400,700|Playfair+Display:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -121,25 +122,25 @@
 		<div class="find-feature" id="find">
 			<div class="container-fluid">
 				<img class="img-responsive find-header" src="img/find-header.png" alt="Find Us">
-								<!-- Map Feature -->
+				<div class="row">
+					<div class="col-md-6">
 						<h1>...On the Map</h1>
-						<div id="map"></div>
-						<div id="directions-widget">
-				      <strong>Cumberland Brewery</strong>
-				      <p>1576 Bardstown Rd, Louisville, KY 40205</p>
-							<div class="navigate">
-			      		<a target="_blank" href="https://www.google.com/maps/dir//Cumberland+Brewery,+Bardstown+Road,+Louisville,+KY/@38.2308503,-85.7230165,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e!2m2!1d-85.7055049!2d38.2308711?hl=en">
-			      			<div><img class=" navigate-icon" src="img/navigate.png" alt="Logo depicting arrows representing the directions link."></div>
-			      			<div class="navigate-text">Directions</div>
-			      		</a>
-			      	</div>
-			      	<div>
-			      		<a target="_blank" href="https://www.google.com/maps/place/Cumberland+Brewery/@38.2308711,-85.7230144,14z/data=!4m2!3m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e?hl=en" jsaction="mouseup:placeCard.largerMap" class="navigate-text">View larger map</a>
-			      	</div>
-			      	<a target="_blank" class="send-to-device-button" style="display:none">Send to device</a>
-		      	</div>
-								
-
+				<div id="map"></div>
+				<div id="directions-widget">
+		      <strong>Cumberland Brewery</strong>
+		      <p>1576 Bardstown Rd, Louisville, KY 40205</p>
+					<div class="navigate">
+	      		<a target="_blank" href="https://www.google.com/maps/dir//Cumberland+Brewery,+Bardstown+Road,+Louisville,+KY/@38.2308503,-85.7230165,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e!2m2!1d-85.7055049!2d38.2308711?hl=en">
+	      			<div><img class=" navigate-icon" src="img/navigate.png" alt="Logo depicting arrows representing the directions link."></div>
+	      			<div class="navigate-text">Directions</div>
+	      		</a>
+	      	</div>
+	      	<div>
+	      		<a target="_blank" href="https://www.google.com/maps/place/Cumberland+Brewery/@38.2308711,-85.7230144,14z/data=!4m2!3m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e?hl=en" jsaction="mouseup:placeCard.largerMap" class="navigate-text">View larger map</a>
+	      	</div>
+	      	<a target="_blank" class="send-to-device-button" style="display:none">Send to device</a>
+      	</div>
+							
 					    <!-- Maps API Settings -->
 			  <script>
 			    var cumberland = {lat: 38.230884, lng: -85.705506};
@@ -160,10 +161,8 @@
 			      var widgetDiv = document.getElementById('directions-widget');
 			      map.controls[google.maps.ControlPosition.TOP_LEFT].push(widgetDiv);
 
-			      // Append a Save Control to the existing save-widget div.
 			      var saveWidget = new google.maps.SaveWidget(widgetDiv, {
 			        place: {
-			          // ChIJN1t_tDeuEmsRUsoyG83frY4 is the place Id for Google Sydney.
 			          placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
 			          location: cumberland
 			        },
@@ -179,45 +178,52 @@
 			      });
 			    }
 			  </script> <!-- End Maps API Settings -->
-
-			  <h1>...On Facebook</h1>
+					</div>
+					<div class="col-md-6">
+						<h1>...On Facebook</h1>
 		  	<div class="text-center">
 		  					<!-- Facebook Feature -->
-		  		<div class="fb-page" data-href="https://www.facebook.com/cumberlandbrews/?fref=nf" data-tabs="timeline" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+		  		<div class="fb-page" data-href="https://www.facebook.com/cumberlandbrews/?fref=nf" data-tabs="timeline" data-width="500" data-height="450" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
 			    </div>
 		    </div>
+					</div>
+				</div>
+						<!-- Map Feature -->
+				
 
-		    <div class="row">
-		    	<h1>...Or Look for the Board!</h1>
+			  
+
+		    <div class="row boards">
+		    	<h1>...Or Look for the Chalkboard!</h1>
 		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board1.png" class="board">
+		    		<img src="img/boards/board1.png" width="165px" alt='Sidewalk chalkboard that reads: "Boyfriend with end bolded, Girlfriend with end bolded, Be (forever) er"' class="board">
 		    	</div>
 		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board2.png" class="board">
+		    		<img src="img/boards/board2.png" width="165px" alt="Sidewalk chalkboard that reads: Roses are red, tomatoes are also red, Poems are hard, it's $2.75 pint night" class="board">
 		    	</div>
 		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board3.png" class="board">
+		    		<img src="img/boards/board3.png" width="165px" alt="Sidewalk chalkboard that has a diagram: Are you having a bad day? With a line drawn to yes or no. If yes, come have a drink. If no, come have a drink." class="board">
 		    	</div>
 		    	<div class="col-sm-3 col-xs-6 text-center">
-		    		<img src="img/boards/board2.png" class="board">
+		    		<img src="img/boards/board4.png" width="165px" alt="Sidewalk chalkboard that reads: Your date may be hot, but our new winter warmer is even hotter" class="board">
 		    	</div>
 		    	<div class="col-sm-3 col-xs-6 text-center">
-		    		<img src="img/boards/board2.png" class="board">
+		    		<img src="img/boards/board5.png" width="165px" alt="Sidewalk chalkboard that reads: Happy Valentines Day. Your gift is cherry meade, today only (Also available to single people)" class="board">
 		    	</div>
 		    	<div class="col-sm-3 col-xs-6 text-center">
-		    		<img src="img/boards/board2.png" class="board">
+		    		<img src="img/boards/board6.png" width="165px" alt="Sidewalk chalkboard that reads: Beer and stuff, with an arrow pointing inside the building." class="board">
 		    	</div>
 		    	<div class="col-sm-3 col-xs-6 text-center">
-		    		<img src="img/boards/board2.png" class="board">
+		    		<img src="img/boards/board7.png" width="165px" alt="Sidewalk chalkboard that reads: Drink! (preferably here)" class="board">
 		    	</div>
 		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board2.png" class="board">
+		    		<img src="img/boards/board8.png" width="165px" alt="Sidewalk chalkboard that reads: Eat like an employee 50% off all menu items 12-3" class="board">
 		    	</div>
 		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board2.png" class="board">
+		    		<img src="img/boards/board9.png" width="165px" alt="Sidewalk chalkboard that reads: No giant walls between you and $2.75 pint night!" class="board">
 		    	</div>
 		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board2.png" class="board">
+		    		<img src="img/boards/board10.png" width="165px" alt="Sidewalk chalkboard that reads: Make America Drink Again next to a pint glass wearing a Donald Trump wig." class="board">
 		    	</div>
 		    </div>
 		  </div>
@@ -272,7 +278,6 @@
 	</div>
 	</footer>
 
-	
 		<!-- jQuery Library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Bootstrap JavaScript -->

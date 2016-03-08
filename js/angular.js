@@ -34,8 +34,8 @@ var appetizers = [
 		item: "Cumberland Wings",
 		subDescription: "Jamaican Jerk, Honey Chipotle or Spicy Buffalo",
 		description: "Served with Ranch and Celery Sticks",
-		price: "4.95 (5 Wings)",
-		secondPrice: "8.95 (10 Wings)"
+		price: "4.95 (5)",
+		secondPrice: "8.95 (10)"
 	},
 	{
 		item: "Roasted Red Pepper Hummus",
