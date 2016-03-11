@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
+
+
 <head>
 	<title>Cumberland Brews | Louisville, KY</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	
+		<!-- CSS Link Tags -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link href='https://fonts.googleapis.com/css?family=Lora:400,700|Playfair+Display:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
+
 <body>
 
 			<!-- Facebook API Script -->
@@ -20,7 +25,8 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}
 		(document, 'script', 'facebook-jssdk'));
-	</script>
+	</script> <!-- End Facebook Script -->
+
 
 			<!-- Navbar -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -43,6 +49,7 @@
 			</div>
 		</div>
 	</nav> <!-- End Navbar -->
+
 
 			<!-- Carousel -->
 	<div class="carousel slide" id="my-carousel" data-ride="carousel">
@@ -72,6 +79,7 @@
 		</a>
 	</div> <!-- End Carousel -->
 
+
 			<!-- Welcome Feature -->
 	<div class="container-fluid">
 		<div class="jumbotron headline-feature text-center" id="welcome-feature">
@@ -81,14 +89,15 @@
 		</div>
 	</div><!-- End Welcome Content -->
 
+
 			<!-- Brews Feature -->
 	<div class="container-fluid">
 		<div class="jumbotron home-feature">
 			<div class="row">
-				<div class="col-sm-7">
+				<div class="col-md-7">
 					<img class="img-responsive img-rounded" src="img/kegs-closeup.png">
 				</div>
-				<div class="col-sm-5">
+				<div class="col-md-5">
 					<h2>Cumberland's Brews</h2>
 					<p class="lead">Check out all the beers we have on tap! Be sure to also catch our seasonal beers which only hang around for a limited time!</p>
 					<div class="feature-button">
@@ -98,16 +107,19 @@
 			</div>
 		</div>
 	</div> <!-- End Brews Feature -->
+
+
 	<hr class="break">
+
 
 			<!-- Food Feature -->
 	<div class="container-fluid">
 		<div class="jumbotron home-feature">
 			<div class="row">
-				<div class="col-sm-7 col-sm-push-5">
+				<div class="col-md-7 col-md-push-5">
 					<img class="img-responsive img-rounded" src="img/dining-room.png">
 				</div>
-				<div class="col-sm-5 col-sm-pull-7">
+				<div class="col-md-5 col-md-pull-7">
 					<h2>Cumberland's Grub</h2>
 					<p class="lead">Need to wash down your beer with a little food? Check out our menu! It is full of all kinds of delicious pub grub!</p>
 					<div class="feature-button">
@@ -116,171 +128,188 @@
 				</div>
 			</div>
 		</div>
-	</div> 
+	</div> <!-- End Food Feature -->
+
 
 			<!-- Find Us Feature -->
 		<div class="find-feature" id="find">
 			<div class="container-fluid">
 				<img class="img-responsive find-header" src="img/find-header.png" alt="Find Us">
 				<div class="row">
+
+
+							<!-- Map Feature -->
 					<div class="col-md-6">
 						<h1>...On the Map</h1>
-				<div id="map"></div>
-				<div id="directions-widget">
-		      <strong>Cumberland Brewery</strong>
-		      <p>1576 Bardstown Rd, Louisville, KY 40205</p>
-					<div class="navigate">
-	      		<a target="_blank" href="https://www.google.com/maps/dir//Cumberland+Brewery,+Bardstown+Road,+Louisville,+KY/@38.2308503,-85.7230165,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e!2m2!1d-85.7055049!2d38.2308711?hl=en">
-	      			<div><img class=" navigate-icon" src="img/navigate.png" alt="Logo depicting arrows representing the directions link."></div>
-	      			<div class="navigate-text">Directions</div>
-	      		</a>
-	      	</div>
-	      	<div>
-	      		<a target="_blank" href="https://www.google.com/maps/place/Cumberland+Brewery/@38.2308711,-85.7230144,14z/data=!4m2!3m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e?hl=en" jsaction="mouseup:placeCard.largerMap" class="navigate-text">View larger map</a>
-	      	</div>
-	      	<a target="_blank" class="send-to-device-button" style="display:none">Send to device</a>
-      	</div>
-							
-					    <!-- Maps API Settings -->
-			  <script>
-			    var cumberland = {lat: 38.230884, lng: -85.705506};
+						<div id="map"></div>
+						<div id="directions-widget">
+				      <strong>Cumberland Brewery</strong>
+				      <p>1576 Bardstown Rd, Louisville, KY 40205</p>
+							<div class="navigate">
+			      		<a target="_blank" href="https://www.google.com/maps/dir//Cumberland+Brewery,+Bardstown+Road,+Louisville,+KY/@38.2308503,-85.7230165,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e!2m2!1d-85.7055049!2d38.2308711?hl=en">
+			      			<div><img class=" navigate-icon" src="img/navigate.png" alt="Logo depicting arrows representing the directions link."></div>
+			      			<div class="navigate-text">Directions</div>
+			      		</a>
+			      	</div>
+			      	<div>
+			      		<a target="_blank" href="https://www.google.com/maps/place/Cumberland+Brewery/@38.2308711,-85.7230144,14z/data=!4m2!3m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e?hl=en" jsaction="mouseup:placeCard.largerMap" class="navigate-text">View larger map</a>
+			      	</div>
+			      	<a target="_blank" class="send-to-device-button" style="display:none">Send to device</a>
+		      	</div>
+									
+							    <!-- Maps API Settings -->
+					  <script>
+					    var cumberland = {lat: 38.230884, lng: -85.705506};
 
-			    function initMap() {
-			      var map = new google.maps.Map(document.getElementById('map'), {
-			        zoom: 17,
-			        center: cumberland,
-			        mapTypeControlOptions: {
-			          mapTypeIds: [
-			            google.maps.MapTypeId.ROADMAP,
-			            google.maps.MapTypeId.SATELLITE
-			          ],
-			          position: google.maps.ControlPosition.BOTTOM_LEFT
-			        }
-			      });
+					    function initMap() {
+					      var map = new google.maps.Map(document.getElementById('map'), {
+					        zoom: 17,
+					        center: cumberland,
+					        mapTypeControlOptions: {
+					          mapTypeIds: [
+					            google.maps.MapTypeId.ROADMAP,
+					            google.maps.MapTypeId.SATELLITE
+					          ],
+					          position: google.maps.ControlPosition.BOTTOM_LEFT
+					        }
+					      });
 
-			      var widgetDiv = document.getElementById('directions-widget');
-			      map.controls[google.maps.ControlPosition.TOP_LEFT].push(widgetDiv);
+					      var widgetDiv = document.getElementById('directions-widget');
+					      map.controls[google.maps.ControlPosition.TOP_LEFT].push(widgetDiv);
 
-			      var saveWidget = new google.maps.SaveWidget(widgetDiv, {
-			        place: {
-			          placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
-			          location: cumberland
-			        },
-			        attribution: {
-			          source: 'Google Maps JavaScript API',
-			          webUrl: 'https://developers.google.com/maps/'
-			        }
-			      });
+					      var saveWidget = new google.maps.SaveWidget(widgetDiv, {
+					        place: {
+					          placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
+					          location: cumberland
+					        },
+					        attribution: {
+					          source: 'Google Maps JavaScript API',
+					          webUrl: 'https://developers.google.com/maps/'
+					        }
+					      });
 
-			      var marker = new google.maps.Marker({
-			        map: map,
-			        position: saveWidget.getPlace().location
-			      });
-			    }
-			  </script> <!-- End Maps API Settings -->
-					</div>
+					      var marker = new google.maps.Marker({
+					        map: map,
+					        position: saveWidget.getPlace().location
+					      });
+					    }
+					  </script>
+					</div> <!-- End Map Feature -->
+
+
+							<!-- Facebook Feature -->
 					<div class="col-md-6">
 						<h1>...On Facebook</h1>
-		  	<div class="text-center">
-		  					<!-- Facebook Feature -->
-		  		<div class="fb-page" data-href="https://www.facebook.com/cumberlandbrews/?fref=nf" data-tabs="timeline" data-width="500" data-height="450" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-			    </div>
-		    </div>
+				  	<div class="text-center">
+				  		<div class="fb-page" data-href="https://www.facebook.com/cumberlandbrews/?fref=nf" data-tabs="timeline" data-width="500" data-height="450" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+					    </div>
+				    </div>
 					</div>
-				</div>
-						<!-- Map Feature -->
-				
+				</div> <!-- End Facebook Feature -->
+							
 
-			  
+							<!-- Boards Feature -->
+					<h1>...Or Look for the Chalkboard!</h1>
+			    <div class="row boards">
+			    	<div class="col-md-4 col-xs-6 text-center">
+			    		<img src="img/boards/board1.png" width="165px" alt='Sidewalk chalkboard that reads: "Boyfriend with end bolded, Girlfriend with end bolded, Be (forever) er"' class="board">
+			    	</div>
+			    	<div class="col-md-4 col-xs-6 text-center">
+			    		<img src="img/boards/board2.png" width="165px" alt="Sidewalk chalkboard that reads: Roses are red, tomatoes are also red, Poems are hard, it's $2.75 pint night" class="board">
+			    	</div>
+			    	<div class="col-md-4 col-xs-6 text-center">
+			    		<img src="img/boards/board3.png" width="165px" alt="Sidewalk chalkboard that has a diagram: Are you having a bad day? With a line drawn to yes or no. If yes, come have a drink. If no, come have a drink." class="board">
+			    	</div>
+			    	<div class="col-md-3 col-xs-6 text-center">
+			    		<img src="img/boards/board4.png" width="165px" alt="Sidewalk chalkboard that reads: Your date may be hot, but our new winter warmer is even hotter" class="board">
+			    	</div>
+			    	<div class="col-md-3 col-xs-6 text-center">
+			    		<img src="img/boards/board5.png" width="165px" alt="Sidewalk chalkboard that reads: Happy Valentines Day. Your gift is cherry meade, today only (Also available to single people)" class="board">
+			    	</div>
+			    	<div class="col-md-3 col-xs-6 text-center">
+			    		<img src="img/boards/board6.png" width="165px" alt="Sidewalk chalkboard that reads: Beer and stuff, with an arrow pointing inside the building." class="board">
+			    	</div>
+			    	<div class="col-md-3 col-xs-6 text-center">
+			    		<img src="img/boards/board7.png" width="165px" alt="Sidewalk chalkboard that reads: Drink! (preferably here)" class="board">
+			    	</div>
+			    	<div class="col-md-4 col-xs-6 text-center">
+			    		<img src="img/boards/board8.png" width="165px" alt="Sidewalk chalkboard that reads: Eat like an employee 50% off all menu items 12-3" class="board">
+			    	</div>
+			    	<div class="col-md-4 col-xs-6 text-center">
+			    		<img src="img/boards/board9.png" width="165px" alt="Sidewalk chalkboard that reads: No giant walls between you and $2.75 pint night!" class="board">
+			    	</div>
+			    	<div class="col-md-4 col-xs-6 text-center">
+			    		<img src="img/boards/board10.png" width="165px" alt="Sidewalk chalkboard that reads: Make America Drink Again next to a pint glass wearing a Donald Trump wig." class="board">
+			    	</div>
+			    </div> <!-- End Boards Feature -->
 
-		    <div class="row boards">
-		    	<h1>...Or Look for the Chalkboard!</h1>
-		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board1.png" width="165px" alt='Sidewalk chalkboard that reads: "Boyfriend with end bolded, Girlfriend with end bolded, Be (forever) er"' class="board">
-		    	</div>
-		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board2.png" width="165px" alt="Sidewalk chalkboard that reads: Roses are red, tomatoes are also red, Poems are hard, it's $2.75 pint night" class="board">
-		    	</div>
-		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board3.png" width="165px" alt="Sidewalk chalkboard that has a diagram: Are you having a bad day? With a line drawn to yes or no. If yes, come have a drink. If no, come have a drink." class="board">
-		    	</div>
-		    	<div class="col-sm-3 col-xs-6 text-center">
-		    		<img src="img/boards/board4.png" width="165px" alt="Sidewalk chalkboard that reads: Your date may be hot, but our new winter warmer is even hotter" class="board">
-		    	</div>
-		    	<div class="col-sm-3 col-xs-6 text-center">
-		    		<img src="img/boards/board5.png" width="165px" alt="Sidewalk chalkboard that reads: Happy Valentines Day. Your gift is cherry meade, today only (Also available to single people)" class="board">
-		    	</div>
-		    	<div class="col-sm-3 col-xs-6 text-center">
-		    		<img src="img/boards/board6.png" width="165px" alt="Sidewalk chalkboard that reads: Beer and stuff, with an arrow pointing inside the building." class="board">
-		    	</div>
-		    	<div class="col-sm-3 col-xs-6 text-center">
-		    		<img src="img/boards/board7.png" width="165px" alt="Sidewalk chalkboard that reads: Drink! (preferably here)" class="board">
-		    	</div>
-		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board8.png" width="165px" alt="Sidewalk chalkboard that reads: Eat like an employee 50% off all menu items 12-3" class="board">
-		    	</div>
-		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board9.png" width="165px" alt="Sidewalk chalkboard that reads: No giant walls between you and $2.75 pint night!" class="board">
-		    	</div>
-		    	<div class="col-sm-4 col-xs-6 text-center">
-		    		<img src="img/boards/board10.png" width="165px" alt="Sidewalk chalkboard that reads: Make America Drink Again next to a pint glass wearing a Donald Trump wig." class="board">
-		    	</div>
-		    </div>
-		  </div>
+			</div>
 		</div> <!-- End Find Feature -->
 
-			<!-- Google Maps API Loading Script -->
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtuZlwBYxk3dRtsKW1OVDfxfnzBVlQxTU&callback=initMap">
-	</script>
 
 			<!-- Footer -->
 	<footer>
-		<div   id="main-footer">
+
+				<!-- Main Footer -->
+		<div id="main-footer">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-4 col-xs-6 text-center">
+					<div class="col-md-4 col-xs-6 text-center">
 						<p>1576 Bardstown Rd.</p>
 	  				<p>Louisville, KY 40205</p>
 	  				<a href="tel:502-458-8727"><span class="glyphicon glyphicon-earphone"></span> (502) 458-8727</a>
 	  				<div class="fb-like" data-href="https://www.facebook.com/pages/Cumberland-Brews/236531969737103" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">
 		  			</div>
 					</div>
-					<div class="col-sm-4 col-xs-6 text-center">
+					<div class="col-md-4 col-xs-6 text-center">
 	  				<p class="lead">Hours:</p>
 	  				<p>Mon - Th: 4p-11p</p>
 	  				<p>Friday: 4p-1a</p>
 	  				<p>Saturday: 12p-1a</p>
 	  				<p>Sunday: 12p-11p</p>
 	  			</div>
-	  			<div class="col-sm-4">
+	  			<div class="col-md-4 col-xs-12 text-center">
 			  		<img src="img/cb-logo-trans.png" class="img-responsive cb-logo" alt="Cumberland Brewery logo: 'Cumberland Brewery, Louisville, Kentucky'">
 	  			</div>
 				</div>
 			</div>
-		</div>
-			<hr>
-	<div id="sub-footer">
-		<div class="container-fluid">
-  		<div class="row">
-  			<div class="col-sm-4 text-center">
-  				<a target="_blank" href="https://www.facebook.com/pages/Cumberland-Brews/236531969737103"><img src="fonts/facebook.png" alt="Facebook social media icon" class="social-icon"></a>
-  				<a target="_blank" href="http://www.yelp.com/biz/cumberland-brews-louisville"><img src="fonts/yelp.png" alt="Yelp social media icon" class="social-icon"></a>
-  				<a target="_blank" href="https://untappd.com/CumberlandBrewery"><img src="fonts/untappd.png" alt="Untappd social media icon" class="social-icon"></a>
-  			</div>
-  			<div class="col-sm-4 text-center">
-  				<p>&copy;2016 Cumberland Brewery</p>
-  			</div>
-  			<div class="col-sm-4 text-center">
-  				<p>Mitch Sharber | Designer</p>
-  			</div>
-  		</div>
-  	</div>
-	</div>
-	</footer>
+		</div> <!-- End Main Footer -->
+
+		<hr>
+
+				<!-- Sub Footer -->
+		<div id="sub-footer">
+			<div class="container-fluid">
+	  		<div class="row">
+	  			<div class="col-md-4 text-center">
+	  				<a target="_blank" href="https://www.facebook.com/pages/Cumberland-Brews/236531969737103"><img src="fonts/facebook.png" alt="Facebook social media icon" class="social-icon"></a>
+	  				<a target="_blank" href="http://www.yelp.com/biz/cumberland-brews-louisville"><img src="fonts/yelp.png" alt="Yelp social media icon" class="social-icon"></a>
+	  				<a target="_blank" href="https://untappd.com/CumberlandBrewery"><img src="fonts/untappd.png" alt="Untappd social media icon" class="social-icon"></a>
+	  			</div>
+	  			<div class="col-md-4 text-center">
+	  				<p>&copy;2016 Cumberland Brewery</p>
+	  			</div>
+	  			<div class="col-md-4 text-center">
+	  				<p>Mitch Sharber | Designer</p>
+	  			</div>
+	  		</div>
+	  	</div>
+		</div> <!-- End Sub Footer -->
+
+	</footer> <!-- End Footer -->
+
+
+	<!-- Script Tags -->
 
 		<!-- jQuery Library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 		<!-- Bootstrap JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<!-- Google Maps API Script -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtuZlwBYxk3dRtsKW1OVDfxfnzBVlQxTU&callback=initMap">
+	</script>
+
 </body>
 </html>
