@@ -87,7 +87,7 @@
           <h1 class="text-center">Appetizers</h1>
           <div ng-repeat="product in menu.products">
   	        <div class="row menu-items">
-  	        	<h3 class="col-xs-9"> {{product.item}} </h3>
+  	        	<h2 class="col-xs-9"> {{product.item}} </h2>
   	        	<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
   	        </div>
   	        <div class="row">
@@ -105,7 +105,7 @@
           <div ng-controller="SoupsSaladsController as menu">
             <div ng-repeat="product in menu.products">
             	<div class="row menu-items">
-            		<h3 class="col-xs-9"> {{product.item}} </h3>
+            		<h2 class="col-xs-9"> {{product.item}} </h2>
             		<p class="col-xs-2 col-xs-offset-1 text-left price" ng-show="product.price"><b> ${{product.price}} </b></p>
             	</div>
             	<div class="row">
@@ -151,7 +151,7 @@
       		<div ng-controller="FareController as menu">
       			<div ng-repeat="product in menu.products">
       				<div class="row menu-items">
-      					<h3 class="col-xs-9"> {{product.item}} </h3>
+      					<h2 class="col-xs-9"> {{product.item}} </h2>
       					<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
       				</div>
       				<div class="row">
@@ -190,7 +190,7 @@
       		<div ng-controller="DessertsController as menu">
       			<div ng-repeat="product in menu.products">
       				<div class="row menu-items">
-      					<h3 class="col-xs-9"> {{product.item}} </h3>
+      					<h2 class="col-xs-9"> {{product.item}} </h2>
       					<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
       				</div>
       				<div class="row">
@@ -290,6 +290,6 @@
 
     <!-- Angular Script -->
   <script type="text/javascript" src="js/angular.js"></script>
-  
+
 </body>
 </html>

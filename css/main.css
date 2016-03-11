@@ -164,7 +164,8 @@ hr {
 }
 
 .brew-subtitle {
-	padding-bottom: .25em;
+	margin-top: 1em;
+	padding-bottom: .5em;
 	color: #ed5031;
 	border-bottom: 2px solid #1b2227;
 }
@@ -219,8 +220,12 @@ hr {
 	background-color: #303e47;
 }
 
+.menu h2 {
+	font-size: 2em;
+}
+
 .menu p {
-	font-size: 1.2em;
+	font-size: 1.5em;
 }
 
 .menu-items {
@@ -428,6 +433,17 @@ hr {
 		margin: 0 .5em; 
 	}
 
+	.menu h2 {
+		font-size: 1.5em;
+	}
+
+	.menu p {
+		font-size: 1.2em;
+	}
+
+
+	/* Map Styles
+	=================================== */
 	#map {
 		width: 500px;
 	}
@@ -440,6 +456,13 @@ hr {
 ============================================== */
 
 @media (min-width: 991px) {
+
+	/* Brew Page
+	=================================== */
+
+	.brew-subtitle {
+		margin-top: 0;
+	}
 
 	/* Map Styles
 	=================================== */
@@ -460,5 +483,5 @@ hr {
 	.cb-logo {
 		width: 65%;
 	}
-	
+
 }
