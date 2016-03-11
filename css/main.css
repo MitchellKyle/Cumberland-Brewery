@@ -1,5 +1,6 @@
-/* General Styles
-=================================== */
+/* ==============================================
+		General Styles
+============================================== */
 
 html,
 body {
@@ -41,8 +42,12 @@ hr {
 	margin: 0 auto;
 }
 
-/* Navbar Styles
-=================================== */
+
+
+
+/* ==============================================
+		Navbar Styles
+============================================== */
 
 .navbar-inverse {
 	background-color: rgba(37,48,55, .9);
@@ -74,73 +79,16 @@ hr {
 	background-color: #253037;
 }
 
-/* Button Styles
-=================================== */
 
-.feature-button {
-	text-align: center;
-	margin-top: 3em;
-	margin-bottom: 2em;
-}
 
-.button {
-	padding: .5em;
-	color: #fff;
-	font-size: 1.5em;
-	background-color: rgba(37,48,55, .8);
-	border-radius: 5px;
-	border-bottom: 5px solid #253037;
-}
 
-.button:hover {
-	color: #ed5031;
-	text-decoration: none;
-	background-color: rgba(37,48,55,.9);
-}
+/* ==============================================
+		Layout Styles
+============================================== */
 
-.button:active {
-	border-bottom: 1px solid #253037;
-}
 
-/* Pics & Icon Styles
-=================================== */
-
-#cb-nav-logo {
-	display: inline-block;
-	width: 5%;
-}
-
-.cb-logo {
-	width: 25%;
-	border-radius: 50%;
-	margin: 1em auto 0;
-}
-
-.social-icon {
-	border: 1px solid #fff;
-	border-radius: 5px;
-	margin: 0 3px;
-}
-
-.navigate-icon {
-	width: 50px;
-}
-
-#menu-header {
-	height: 500px;
-	width: 100%;
-	background: url('../img/menu-header.png') no-repeat center;
-	background-size: cover;
-}
-
-.board {
-	box-shadow: 3px 3px 15px 2px #000;
-}
-
-/* Layout Styles
-=================================== */
-
-/*Home Page*/
+	/* Home Page
+	=================================== */
 
 #welcome-feature {
 	background-color: transparent;
@@ -156,7 +104,10 @@ hr {
 	color: #ed5031;
 }
 
-/*Find Feature*/
+
+
+	/* Find Feature
+	=================================== */
 
 .find-feature {
 	background-color: rgba(68,88,101,.4);
@@ -185,7 +136,10 @@ hr {
 	margin: 1em 0;
 }
 
-/*Brew & Menu Pages*/
+
+
+	/* Brew & Menu Pages (Shared Styles)
+	=================================== */
 
 .page-header-img {
 	width: 100%;
@@ -200,14 +154,18 @@ hr {
 	font-size: 3em;
 }
 
-/*Brew Page*/
+
+
+	/* Brew Page
+	=================================== */
 
 .page-feature {
 	margin-bottom: 4em;
 }
 
 .brew-subtitle {
-	padding-bottom: .25em;
+	margin-top: 1em;
+	padding-bottom: .5em;
 	color: #ed5031;
 	border-bottom: 2px solid #1b2227;
 }
@@ -230,7 +188,10 @@ hr {
 	margin-left: .5em;
 }
 
-/*Menu Page*/
+
+
+	/* Menu Page
+	=================================== */
 
 .nav-pills {
 	display: flex;
@@ -259,8 +220,12 @@ hr {
 	background-color: #303e47;
 }
 
+.menu h2 {
+	font-size: 2em;
+}
+
 .menu p {
-	font-size: 1.2em;
+	font-size: 1.5em;
 }
 
 .menu-items {
@@ -281,8 +246,85 @@ hr {
 	margin-bottom: 1em;
 }
 
-/* Map Styles
-=================================== */
+
+
+
+/* ==============================================
+		Footer Styles
+============================================== */
+
+#main-footer {
+	color: #fff;
+	background-color: #253037;
+	padding: 2em 0;
+}
+
+#main-footer .lead {
+	margin-bottom: 10px;
+}
+
+#main-footer a {
+	display: block;
+	color: #fff;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+#sub-footer {
+	color: #fff;
+	background-color: #1b2227;
+	padding: 1.5em 0;
+}
+
+#sub-footer p {
+	margin: 0;
+}
+
+
+
+
+/* ==============================================
+		Pics & Icon Styles
+============================================== */
+
+#cb-nav-logo {
+	display: inline-block;
+	width: 5%;
+}
+
+.cb-logo {
+	width: 30%;
+	border-radius: 50%;
+	margin: 1em auto;
+}
+
+.social-icon {
+	border: 1px solid #fff;
+	border-radius: 5px;
+	margin: 0 3px 10px;
+}
+
+.navigate-icon {
+	width: 50px;
+}
+
+#menu-header {
+	height: 500px;
+	width: 100%;
+	background: url('../img/menu-header.png') no-repeat center;
+	background-size: cover;
+}
+
+.board {
+	box-shadow: 3px 3px 15px 2px #000;
+}
+
+
+
+
+/* ==============================================
+		Map Styles
+============================================== */
 
 #map {
 	margin-right: auto;
@@ -319,39 +361,56 @@ hr {
 	color: #1b2227;
 }
 
-/* Footer Styles
-=================================== */
 
-#main-footer {
-	color: #fff;
-	background-color: #253037;
-	padding: 2em 0;
-}
 
-#main-footer .lead {
-	margin-bottom: 10px;
-}
 
-#main-footer a {
-	display: block;
-	color: #fff;
-	margin-top: 2em;
+/* ==============================================
+		Button Styles
+============================================== */
+
+.feature-button {
+	text-align: center;
+	margin-top: 3em;
 	margin-bottom: 2em;
 }
 
-#sub-footer {
+.button {
+	padding: .5em;
 	color: #fff;
-	background-color: #1b2227;
-	padding: 1.5em 0;
+	font-size: 1.5em;
+	background-color: rgba(37,48,55, .8);
+	border-radius: 5px;
+	border-bottom: 5px solid #253037;
 }
 
-#sub-footer p {
-	margin: 0;
+.button:hover {
+	color: #ed5031;
+	text-decoration: none;
+	background-color: rgba(37,48,55,.9);
 }
 
-/* Media Queries
-=========================================================================================
-========================================================================================= */
+.button:active {
+	border-bottom: 1px solid #253037;
+}
+
+
+
+
+
+
+/* 
+   ===========================================
+   ===========================================
+								Media Queries
+   ===========================================
+   =========================================== 
+*/
+
+
+
+/* ==============================================
+		Medium Screen Sizes
+============================================== */
 
 @media (min-width: 767px) {
 
@@ -374,26 +433,55 @@ hr {
 		margin: 0 .5em; 
 	}
 
+	.menu h2 {
+		font-size: 1.5em;
+	}
+
+	.menu p {
+		font-size: 1.2em;
+	}
+
+
+	/* Map Styles
+	=================================== */
 	#map {
 		width: 500px;
 	}
 
-	/* Footer Styles
-	=================================== */
-
-	.cb-logo {
-		width: 65%;
-	}
 }
 
+
+/* ==============================================
+		Large Screen Sizes
+============================================== */
+
 @media (min-width: 991px) {
+
+	/* Brew Page
+	=================================== */
+
+	.brew-subtitle {
+		margin-top: 0;
+	}
+
+	/* Map Styles
+	=================================== */
+
 	#map {
 		width: 470px;
 		height: 450px;
 	}
 
+	/* Pics & Logo Styles
+	=================================== */
+
 	.fb-logo {
 		width: 400px;
 		height: 450px;
 	}
+
+	.cb-logo {
+		width: 65%;
+	}
+
 }
