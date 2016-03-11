@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html ng-app="menu">
+
+
 <head>
 	<title>Cumberland Brews | Louisville, KY</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-	<script type="text/javascript" src="js/angular.js"></script>
+
+    <!-- CSS Links -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700|Playfair+Display:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
+
 <body>
 
-    <!-- Facebook API Script -->
+      <!-- Facebook API Script -->
   <div id="fb-root"></div>
   <script>
     (function(d, s, id) {
@@ -21,14 +25,15 @@
       fjs.parentNode.insertBefore(js, fjs);
     }
     (document, 'script', 'facebook-jssdk'));
-  </script>
+  </script> <!-- End Facebook Script -->
+
 
 			<!-- Navbar -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsing-navbar" aria-expanded="false">
-					<span class="sr-only"></span>
+					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -45,20 +50,24 @@
 		</div>
 	</nav> <!-- End Navbar -->
 
-      <!-- Header -->
+
+      <!-- Header Image -->
   <div>
     <img src="img/menu-header.png" class="img-responsive page-header-img" alt="Picture of a plate holding a steak topped with mushrooms and an onion ring, with a side of French fries and a beer in a glass on the side.">
   </div>
+
 
       <!-- Page Welcome -->
   <div class="container-fluid page-welcome">
     <div class="jumbotron page-welcome">
       <h1>Cumberland Brewery Menu</h1>
-      <p class="lead">Come for the beer, stay for the food! Our American style pub grub goes well with any of our brews. Check out our full menu with food prepared so well, that we are sure you will leave satisfied and will be coming back for more!</p>
+      <p class="lead">Come for the beer, stay for the food! Our American style pub grub goes well with any of our brews. Check out our full menu with food prepared so well, that we are sure you will leave satisfied and will be coming back for more!
+      </p>
     </div>
-  </div>
+  </div> <!-- End Page Welcome -->
 
-			<!-- Angular Links -->
+
+			<!-- Menu Controller Nav -->
 	<div class="container-fluid page-feature" ng-controller="MenuController as menu">
     <ul class="nav nav-pills">
         <li><a href ng-click="tab = 1">Appetizers</a></li>
@@ -66,11 +75,12 @@
         <li><a href ng-click="tab = 3">Main Fare</a></li>
         <li><a href ng-click="tab = 4">Desserts</a></li>
         <li><a href ng-click="tab = 5">Specials</a></li>
-    </ul> <!-- End Angular Links -->
+    </ul> <!-- End Menu Controller Nav -->
 
-        	<!-- Menu Content -->
 
+    	<!-- Menu Content -->
     <div class="menu">
+
         			<!-- Appetizers -->
       <div class="panel" ng-show="tab === 1" ng-controller="AppetizerController as menu">
       	<div class="container-fluid">
@@ -104,7 +114,7 @@
             	</div>
             </div>
           </div>
-          						<!-- Sides & A la Carte -->
+    						<!-- Sides & A la Carte -->
           <div class="row">
       			<div class="col-sm-6">
       				<h2>Sides</h2>
@@ -189,7 +199,7 @@
       			</div>
         	</div>
         </div>
-       </div>
+      </div>
 
        		<!-- Specials -->
       <div class="panel" ng-show="tab === 5">
@@ -211,54 +221,75 @@
       		</div>
       	</div>
       </div>
-    </div> <!-- End Menu Content -->
-  </div>
+    </div> 
+  </div> <!-- End Menu Content -->
+
 
 			<!-- Footer -->
-	<footer>
-    <div   id="main-footer">
+  <footer>
+
+        <!-- Main Footer -->
+    <div id="main-footer">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-4 col-xs-6 text-center">
+          <div class="col-md-4 col-xs-6 text-center">
             <p>1576 Bardstown Rd.</p>
             <p>Louisville, KY 40205</p>
             <a href="tel:502-458-8727"><span class="glyphicon glyphicon-earphone"></span> (502) 458-8727</a>
             <div class="fb-like" data-href="https://www.facebook.com/pages/Cumberland-Brews/236531969737103" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">
             </div>
           </div>
-          <div class="col-sm-4 col-xs-6 text-center">
+          <div class="col-md-4 col-xs-6 text-center">
             <p class="lead">Hours:</p>
             <p>Mon - Th: 4p-11p</p>
             <p>Friday: 4p-1a</p>
             <p>Saturday: 12p-1a</p>
             <p>Sunday: 12p-11p</p>
           </div>
-          <div class="col-sm-4">
+          <div class="col-md-4 col-xs-12 text-center">
             <img src="img/cb-logo-trans.png" class="img-responsive cb-logo" alt="Cumberland Brewery logo: 'Cumberland Brewery, Louisville, Kentucky'">
           </div>
         </div>
       </div>
-    </div>
-      <hr>
-  <div id="sub-footer">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-4 text-center">
-          <a target="_blank" href="https://www.facebook.com/pages/Cumberland-Brews/236531969737103"><img src="fonts/facebook.png" alt="Facebook social media icon" class="social-icon"></a>
-          <a target="_blank" href="http://www.yelp.com/biz/cumberland-brews-louisville"><img src="fonts/yelp.png" alt="Yelp social media icon" class="social-icon"></a>
-          <a target="_blank" href="https://untappd.com/CumberlandBrewery"><img src="fonts/untappd.png" alt="Untappd social media icon" class="social-icon"></a>
-        </div>
-        <div class="col-sm-4 text-center">
-          <p>&copy;2016 Cumberland Brewery</p>
-        </div>
-        <div class="col-sm-4 text-center">
-          <p>Mitch Sharber | Designer</p>
+    </div> <!-- End Main Footer -->
+
+    <hr>
+
+        <!-- Sub Footer -->
+    <div id="sub-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <a target="_blank" href="https://www.facebook.com/pages/Cumberland-Brews/236531969737103"><img src="fonts/facebook.png" alt="Facebook social media icon" class="social-icon"></a>
+            <a target="_blank" href="http://www.yelp.com/biz/cumberland-brews-louisville"><img src="fonts/yelp.png" alt="Yelp social media icon" class="social-icon"></a>
+            <a target="_blank" href="https://untappd.com/CumberlandBrewery"><img src="fonts/untappd.png" alt="Untappd social media icon" class="social-icon"></a>
+          </div>
+          <div class="col-md-4 text-center">
+            <p>&copy;2016 Cumberland Brewery</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <p>Mitch Sharber | Designer</p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  </footer>
+    </div> <!-- End Sub Footer -->
+
+  </footer> <!-- End Footer -->
+
+
+  <!-- Script Tags -->
+
+    <!-- jQuery Library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Angular Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+    <!-- Angular Script -->
+  <script type="text/javascript" src="js/angular.js"></script>
+  
 </body>
 </html>

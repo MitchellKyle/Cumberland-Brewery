@@ -1,6 +1,8 @@
 (function(){
 var app = angular.module('menu', []);
 
+// Controllers...
+
 app.controller('MenuController', function(){
 	
 });
@@ -28,6 +30,8 @@ app.controller('FareController', function(){
 app.controller('DessertsController', function(){
 	this.products = desserts;
 });
+
+// Menu objects...
 
 var appetizers = [
 	{
