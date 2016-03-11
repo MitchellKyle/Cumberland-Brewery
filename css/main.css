@@ -441,6 +441,10 @@ hr {
 		font-size: 1.2em;
 	}
 
+	.cb-logo {
+		width: 65%;
+	}
+
 
 	/* Map Styles
 	=================================== */
@@ -480,8 +484,6 @@ hr {
 		height: 450px;
 	}
 
-	.cb-logo {
-		width: 65%;
-	}
+	
 
 }
