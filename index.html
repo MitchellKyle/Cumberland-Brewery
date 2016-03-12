@@ -142,23 +142,21 @@
 							<!-- Map Feature -->
 					<div class="col-md-6">
 						<h1>...On the Map</h1>
-						<div id="map"></div>
 						<div id="directions-widget">
-				      <strong>Cumberland Brewery</strong>
-				      <p>1576 Bardstown Rd, Louisville, KY 40205</p>
 							<div class="navigate">
-			      		<a target="_blank" href="https://www.google.com/maps/dir//Cumberland+Brewery,+Bardstown+Road,+Louisville,+KY/@38.2308503,-85.7230165,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e!2m2!1d-85.7055049!2d38.2308711?hl=en">
-			      			<div><img class=" navigate-icon" src="img/navigate.png" alt="Logo depicting arrows representing the directions link."></div>
-			      			<div class="navigate-text">Directions</div>
-			      		</a>
+			      		<form id="calculate-route" name="calculate-route" action="#" method="get">
+					      	<input type="text" id="start" name="start" required="required"></input>
+					      	<input type="text" id="end" name="end" required="required" value="1576 Bardstown Rd, Louisville, KY 40205"></input>
+					      	<input type="submit"></input>
+					      	<input type="reset"></input>
+					      </form>
 			      	</div>
-			      	<div>
-			      		<a target="_blank" href="https://www.google.com/maps/place/Cumberland+Brewery/@38.2308711,-85.7230144,14z/data=!4m2!3m1!1s0x88690cc9d0b3e34b:0x89931245cf86428e?hl=en" jsaction="mouseup:placeCard.largerMap" class="navigate-text">View larger map</a>
-			      	</div>
-			      	<a target="_blank" class="send-to-device-button" style="display:none">Send to device</a>
-		      	</div>
-									
+						</div>
+						<div id="map"></div>
+						
+					</div>
 							    <!-- Maps API Settings -->
+							    <!-- 
 					  <script>
 					    var cumberland = {lat: 38.230884, lng: -85.705506};
 
@@ -194,8 +192,9 @@
 					        position: saveWidget.getPlace().location
 					      });
 					    }
-					  </script>
-					</div> <!-- End Map Feature -->
+					  </script>  
+
+					</div> <!-- End Map Feature
 
 
 							<!-- Facebook Feature -->
@@ -311,6 +310,9 @@
 		<!-- Google Maps API Script -->
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtuZlwBYxk3dRtsKW1OVDfxfnzBVlQxTU&callback=initMap">
 	</script>
+
+		<!-- Maps/API Request -->
+	<script src="js/maps.js"></script>
 
 </body>
 </html>
