@@ -6,6 +6,7 @@ function initMap() {
     zoom: 17,
     center: cumberland,
     scrollwheel: false,
+    draggable: false,
     mapTypeControlOptions: {
       mapTypeIds: [
         google.maps.MapTypeId.ROADMAP,
