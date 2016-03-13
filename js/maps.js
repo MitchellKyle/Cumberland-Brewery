@@ -5,6 +5,7 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
     center: cumberland,
+    scrollwheel: false,
     mapTypeControlOptions: {
       mapTypeIds: [
         google.maps.MapTypeId.ROADMAP,
@@ -13,6 +14,7 @@ function initMap() {
       position: google.maps.ControlPosition.BOTTOM_LEFT
     }
   });
+
 
   directionsDisplay.setMap(map);
   directionsDisplay.setPanel(document.getElementById('right-panel'));
