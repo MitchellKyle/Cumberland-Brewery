@@ -69,18 +69,20 @@
 
 
 			<!-- Menu Controller Nav -->
-	<div class="container-fluid page-feature" ng-controller="MenuController as menu">
-    <ul class="nav nav-pills">
-        <li><a href ng-click="tab = 1">Appetizers</a></li>
-        <li><a href ng-click="tab = 2">Soups &amp; Salads</a></li>
-        <li><a href ng-click="tab = 3">Main Fare</a></li>
-        <li><a href ng-click="tab = 4">Desserts</a></li>
-        <li><a href ng-click="tab = 5">Specials</a></li>
-    </ul> <!-- End Menu Controller Nav -->
+	<div class="page-feature" ng-controller="MenuController as menu">
+    <div class="container-fluid">
+      <ul class="nav nav-pills">
+          <li><a href ng-click="tab = 1">Appetizers</a></li>
+          <li><a href ng-click="tab = 2">Soups &amp; Salads</a></li>
+          <li><a href ng-click="tab = 3">Main Fare</a></li>
+          <li><a href ng-click="tab = 4">Desserts</a></li>
+          <li><a href ng-click="tab = 5">Specials</a></li>
+      </ul> 
+    </div> <!-- End Menu Controller Nav -->
 
 
     	<!-- Menu Content -->
-    
+        
         <div class="menu">
 
             			<!-- Appetizers -->
@@ -228,7 +230,7 @@
 
 
 			<!-- Footer -->
-  <footer>
+  <footer class="footer">
 
         <!-- Main Footer -->
     <div id="main-footer">
@@ -292,6 +294,9 @@
 
     <!-- Angular Script -->
   <script type="text/javascript" src="js/angular.js"></script>
+
+    <!-- app.js -->
+  <script src="js/app.js"></script>
 
 </body>
 </html>
