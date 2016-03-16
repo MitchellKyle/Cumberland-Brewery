@@ -153,27 +153,38 @@ hr {
 }
 
 #directions-widget {
-	position: relative;
-	box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
-	background-color: white;
-	padding: 10px;
-	font-family: Roboto, Arial;
-	font-size: 13px;
+	background-color: #fff;
 	margin: 15px;
+	padding: 5px;
+	box-shadow: 1px 1px 2px -2px,
+							-1px 1px 2px -2px,
+							-1px -1px 2px -2px,
+							1px -1px 2px -2px;
 }
 
-.navigate-text {
-	color: #1b2227;
+.direct-input {
+	display: block;
+	font-size: 1.3em;
+	margin: 2px;
+	padding: 5px;
+	border-radius: 3px;
+	border: none;
+	box-shadow: 2px 2px 5px -2px;
 }
 
-.navigate-text:hover {
-	color: #1b2227;
+.direct-input:focus {
+	outline: none;
+	border: 2px solid #fff;
 }
 
 #right-panel {
   font-family: 'Roboto','sans-serif';
   line-height: 30px;
   padding-left: 10px;
+  height: 100%;
+  float: right;
+  width: 390px;
+  overflow: auto;
 }
 
 #right-panel select, #right-panel input {
@@ -186,12 +197,6 @@ hr {
 
 #right-panel i {
   font-size: 12px;
-}
-#right-panel {
-  height: 100%;
-  float: right;
-  width: 390px;
-  overflow: auto;
 }
 
 
@@ -394,19 +399,53 @@ hr {
 	padding: .5em;
 	color: #fff;
 	font-size: 1.5em;
-	background-color: rgba(37,48,55, .8);
 	border-radius: 5px;
-	border-bottom: 5px solid #253037;
+	background-color: rgba(37,48,55, .8);
+	box-shadow: -4px 4px 10px -4px #253037,
+						 	-4px -4px 10px -4px #253037,
+							4px -4px 10px -4px #253037,
+							4px 4px 10px -4px #253037;
 }
 
 .button:hover {
 	color: #ed5031;
 	text-decoration: none;
 	background-color: rgba(37,48,55,.9);
+	box-shadow: -4px 4px 10px -1px #253037,
+							-4px -4px 10px -1px #253037,
+							4px -4px 10px -1px #253037,
+							4px 4px 10px -1px #253037;
 }
 
 .button:active {
-	border-bottom: 1px solid #253037;
+	box-shadow: -4px 4px 10px -7px #253037,
+							-4px -4px 10px -7px #253037,
+							4px -4px 10px -7px #253037,
+							4px 4px 10px -7px #253037;
+}
+
+.direct-btn {
+	background-color: #acacac;
+	border-radius: 5px;
+	margin: 2px;
+	box-shadow: -1px 1px 10px -6px #253037,
+						 	-1px -1px 10px -6px #253037,
+							1px -1px 10px -6px #253037,
+							1px 1px 10px -6px #253037;
+}
+
+.direct-btn:hover {
+	box-shadow: -4px 4px 10px -4px #253037,
+							-4px -4px 10px -4px #253037,
+							4px -4px 10px -4px #253037,
+							4px 4px 10px -4px #253037;
+}
+
+.direct-btn:active {
+	box-shadow: -1px 1px 10px -9px #253037,
+							-1px -1px 10px -9px #253037,
+							1px -1px 10px -9px #253037,
+							1px 1px 10px -9px #253037;
 }
 
 

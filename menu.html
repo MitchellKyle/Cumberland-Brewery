@@ -61,7 +61,7 @@
       <!-- Page Welcome -->
   <div class="container-fluid page-welcome" id="top">
     <div class="jumbotron page-welcome">
-      <h1>Cumberland Brewery Menu</h1>
+      <h1>Cumberland's Menu</h1>
       <p class="lead">Come for the beer, stay for the food! Our American style pub grub goes well with any of our brews. Check out our full menu with food prepared so well, that we are sure you will leave satisfied and will be coming back for more!
       </p>
     </div>
@@ -91,12 +91,12 @@
               <h1 class="text-center">Appetizers</h1>
               <div ng-repeat="product in menu.products">
       	        <div class="row menu-items">
-      	        	<h2 class="col-xs-9"> {{product.item}} </h2>
-      	        	<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
+      	        	<h2 class="col-xs-8"> {{product.item}} </h2>
+      	        	<p class="col-xs-3 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
       	        </div>
       	        <div class="row">
-      		        <p class="col-xs-9"><b ng-show="product.subDescription"> {{product.subDescription}} </b> {{product.description}} </p>
-      		        <p class="col-xs-2 col col-xs-offset-1 text-left" ng-show="product.secondPrice"><b> ${{product.secondPrice}} </b></p>
+      		        <p class="col-xs-8"><b ng-show="product.subDescription"> {{product.subDescription}} </b> {{product.description}} </p>
+      		        <p class="col-xs-3 col col-xs-offset-1 text-left" ng-show="product.secondPrice"><b> ${{product.secondPrice}} </b></p>
               	</div>
               </div>
           	</div>
@@ -109,12 +109,12 @@
               <div ng-controller="SoupsSaladsController as menu">
                 <div ng-repeat="product in menu.products">
                 	<div class="row menu-items">
-                		<h2 class="col-xs-9"> {{product.item}} </h2>
-                		<p class="col-xs-2 col-xs-offset-1 text-left price" ng-show="product.price"><b> ${{product.price}} </b></p>
+                		<h2 class="col-xs-8"> {{product.item}} </h2>
+                		<p class="col-xs-3 col-xs-offset-1 text-left price" ng-show="product.price"><b> ${{product.price}} </b></p>
                 	</div>
                 	<div class="row">
-                  	<p class="col-xs-9"> {{product.description}} </p>
-                  	<p class="col-xs-2 col-xs-offset-1 text-left" ng-show="product.secondPrice"><b> ${{product.secondPrice}} </b></p>
+                  	<p class="col-xs-8"> {{product.description}} </p>
+                  	<p class="col-xs-3 col-xs-offset-1 text-left" ng-show="product.secondPrice"><b> ${{product.secondPrice}} </b></p>
                 	</div>
                 </div>
               </div>
@@ -155,8 +155,8 @@
           		<div ng-controller="FareController as menu">
           			<div ng-repeat="product in menu.products">
           				<div class="row menu-items">
-          					<h2 class="col-xs-9"> {{product.item}} </h2>
-          					<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
+          					<h2 class="col-xs-8"> {{product.item}} </h2>
+          					<p class="col-xs-3 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
           				</div>
           				<div class="row">
           					<p class="col-xs-9"> {{product.description}} </p>
@@ -164,24 +164,24 @@
           			</div>
           			<h2 class="text-center" id="sand-toppings">Sandwich Toppings &amp; Dips</h2>
           			<div class="row">
-          				<p class="col-xs-9">Pepper Jack, White or Yellow American, Swiss, Bleu Cheese Crumbles or Shredded Cheddar Cheese</p>
-          				<p class="col-xs-2 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
+          				<p class="col-xs-8">Pepper Jack, White or Yellow American, Swiss, Bleu Cheese Crumbles or Shredded Cheddar Cheese</p>
+          				<p class="col-xs-3 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
           			</div>
           			<div class="row">
-          				<p class="col-xs-9">Bacon, Sauteed Mushrooms, Sauteed Onions, Roasted Garlic, Jalapenos or Raw Horseradish</p>
-          				<p class="col-xs-2 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
+          				<p class="col-xs-8">Bacon, Sauteed Mushrooms, Sauteed Onions, Roasted Garlic, Jalapenos or Raw Horseradish</p>
+          				<p class="col-xs-3 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
           			</div>
           			<div class="row">
-          				<p class="col-xs-9">Chipotle Mayonnaise, Cilantro Sour Cream, Guacamole, Diablo Sauce, Cajun Tartar Sauce, Cinnamon Cream Cheese Dip or Bleu Cheese Dressing</p>
-          				<p class="col-xs-2 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
+          				<p class="col-xs-8">Chipotle Mayonnaise, Cilantro Sour Cream, Guacamole, Diablo Sauce, Cajun Tartar Sauce, Cinnamon Cream Cheese Dip or Bleu Cheese Dressing</p>
+          				<p class="col-xs-3 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
           			</div>
           			<div class="row">
-          				<p class="col-xs-9">Pickle Spear, Extra Onion or Tomato</p>
-          				<p class="col-xs-2 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
+          				<p class="col-xs-8">Pickle Spear, Extra Onion or Tomato</p>
+          				<p class="col-xs-3 col-xs-offset-1 text-left price">&dollar;1.00 Each</p>
           			</div>
           			<div class="row">
-          				<p class="col-xs-9">Plain Mayonnaise, Bar B Q Sauce, Ranch Dressing or Honey Mustard</p>
-          				<p class="col-xs-2 col-xs-offset-1 text-left price">&dollar;0.50 Each</p>
+          				<p class="col-xs-8">Plain Mayonnaise, Bar B Q Sauce, Ranch Dressing or Honey Mustard</p>
+          				<p class="col-xs-3 col-xs-offset-1 text-left price">&dollar;0.50 Each</p>
           			</div>
           		</div>
           	</div>
@@ -194,11 +194,11 @@
           		<div ng-controller="DessertsController as menu">
           			<div ng-repeat="product in menu.products">
           				<div class="row menu-items">
-          					<h2 class="col-xs-9"> {{product.item}} </h2>
-          					<p class="col-xs-2 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
+          					<h2 class="col-xs-8"> {{product.item}} </h2>
+          					<p class="col-xs-3 col-xs-offset-1 text-left price"><b> ${{product.price}} </b></p>
           				</div>
           				<div class="row">
-          					<p class="col-xs-9"> {{product.description}} </p>
+          					<p class="col-xs-8"> {{product.description}} </p>
           				</div>
           			</div>
             	</div>
