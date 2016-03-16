@@ -147,7 +147,7 @@ hr {
 #map {
 	margin-right: auto;
 	margin-left: auto;
-	margin-bottom: 3em;
+	margin-bottom: .5em;
 	width: 95%;
 	height: 400px;
 }
@@ -182,8 +182,8 @@ hr {
   line-height: 30px;
   padding-left: 10px;
   height: 100%;
-  float: right;
-  width: 390px;
+  margin: 0 auto;
+  width: 100%;
   overflow: auto;
 }
 
@@ -426,28 +426,56 @@ hr {
 
 .direct-btn {
 	background-color: #acacac;
-	border-radius: 5px;
 	margin: 2px;
+}
+
+.collapse-btn {
+	color: #fff;
+	padding: 3px 6px;
+	background-color: rgba(37,48,55, .8);
+}
+
+.direct-btn,
+.collapse-btn {
+	border-radius: 5px;
 	box-shadow: -1px 1px 10px -6px #253037,
 						 	-1px -1px 10px -6px #253037,
 							1px -1px 10px -6px #253037,
 							1px 1px 10px -6px #253037;
 }
 
-.direct-btn:hover {
-	box-shadow: -4px 4px 10px -4px #253037,
-							-4px -4px 10px -4px #253037,
-							4px -4px 10px -4px #253037,
-							4px 4px 10px -4px #253037;
+.direct-btn:hover,
+.collapse-btn:hover {
+	outline: none;
+	box-shadow: -1px 1px 10px -4px #253037,
+							-1px -1px 10px -4px #253037,
+							1px -1px 10px -4px #253037,
+							1px 1px 10px -4px #253037;
 }
 
-.direct-btn:active {
+.collapse-btn:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.direct-btn:active,
+.collapse-btn:active {
+	outline: none;
 	box-shadow: -1px 1px 10px -9px #253037,
 							-1px -1px 10px -9px #253037,
 							1px -1px 10px -9px #253037,
 							1px 1px 10px -9px #253037;
 }
 
+.collapse-btn:focus {
+	text-decoration: none;
+	color: #fff;
+}
+
+.direct-btn:focus,
+.collapse-btn:focus {
+	outline: none;
+}
 
 
 

@@ -34,7 +34,7 @@ function initMap() {
   document.getElementById('end').addEventListener('change', onChangeHandler);
 }
 
-//Route calculation function
+//Route calculation function / making the request
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var start = document.getElementById('start').value;
   var end = document.getElementById('end').value;
@@ -44,7 +44,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     origin: start,
     destination: end,
     travelMode: google.maps.TravelMode.DRIVING
-  }, function(response, status) { // Dealing with the response request
+  }, function(response, status) { // Dealing with the request response
     if (status === google.maps.DirectionsStatus.OK) {
       directionsDisplay.setDirections(response);
     } else {
@@ -53,7 +53,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   });
 }
 
-// Calculate the route
+// Calculate the route on submit
 $(document).ready(function() {
   $("#calculate-route").submit(function(event) {
     event.preventDefault();
