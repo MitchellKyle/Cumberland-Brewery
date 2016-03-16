@@ -13,7 +13,7 @@
 </head>
 
 
-<body>
+<body data-spy="scroll" data-target="scrollspy">
 
 			<!-- Facebook API Script -->
 	<div id="fb-root"></div>
@@ -30,7 +30,7 @@
 
 
 			<!-- Navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="scrollspy">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsing-navbar" aria-expanded="false">
@@ -144,16 +144,22 @@
 						<h1>...On the Map</h1>
 						<div id="directions-widget">
 							<div class="navigate">
+								<h4>Get Directions:</h4>
 			      		<form id="calculate-route" name="calculate-route" action="#" method="get">
-					      	<input type="text" id="start" name="start" required="required"></input>
-					      	<input type="text" id="end" name="end" required="required" value="1576 Bardstown Rd, Louisville, KY 40205"></input>
-					      	<input type="submit"></input>
-					      	<input type="reset"></input>
+					      	<input type="text" id="start" name="start" required="required" placeholder="Starting Location" class="direct-input"></input>
+					      	<input type="text" id="end" name="end" required="required" value="1576 Bardstown Rd, Louisville, KY 40205" class="direct-input"></input>
+					      	<input type="submit" class="direct-btn"></input>
+					      	<input type="reset" class="direct-btn"></input>
 					      </form>
 			      	</div>
 						</div>
 
 						<div id="map"></div>
+
+						<a class="collapse-btn" role="button" data-toggle="collapse" href="#collapse" aria-expanded="false">Turn By Turn</a>
+						<div class="collapse" id="collapse">
+							<div id="right-panel"></div>
+						</div>
 						
 					</div> <!-- End Map Feature -->
 
@@ -274,6 +280,9 @@
 
 		<!-- Maps/API Request -->
 	<script src="js/maps.js"></script>
+
+		<!-- app.js -->
+	<script src="js/app.js"></script>
 
 </body>
 </html>
