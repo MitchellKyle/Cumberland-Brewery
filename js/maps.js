@@ -1,7 +1,10 @@
+// Initialize the map
 function initMap() {
   var cumberland = {lat: 38.230884, lng: -85.705506};
   var directionsDisplay = new google.maps.DirectionsRenderer;
   var directionsService = new google.maps.DirectionsService;
+
+  // Map Options Object
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
     center: cumberland,
@@ -15,24 +18,15 @@ function initMap() {
     }
   });
 
-
+  // Display written directions when called
   directionsDisplay.setMap(map);
   directionsDisplay.setPanel(document.getElementById('right-panel'));
 
+  // Display the directions widget
   var widgetDiv = document.getElementById('directions-widget');
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(widgetDiv);
 
-  var saveWidget = new google.maps.SaveWidget(widgetDiv, {
-    place: {
-      placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
-      location: cumberland
-    },
-    attribution: {
-      source: 'Google Maps JavaScript API',
-      webUrl: 'https://developers.google.com/maps/'
-    },
-  });
-
+  // Change event on the form input start and end
   var onChangeHandler = function() {
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   };
@@ -40,14 +34,17 @@ function initMap() {
   document.getElementById('end').addEventListener('change', onChangeHandler);
 }
 
+//Route calculation function / making the request
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var start = document.getElementById('start').value;
   var end = document.getElementById('end').value;
+
+  // Direction request object
   directionsService.route({
     origin: start,
     destination: end,
     travelMode: google.maps.TravelMode.DRIVING
-  }, function(response, status) {
+  }, function(response, status) { // Dealing with the request response
     if (status === google.maps.DirectionsStatus.OK) {
       directionsDisplay.setDirections(response);
     } else {
@@ -56,6 +53,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   });
 }
 
+// Calculate the route on submit
 $(document).ready(function() {
   $("#calculate-route").submit(function(event) {
     event.preventDefault();
