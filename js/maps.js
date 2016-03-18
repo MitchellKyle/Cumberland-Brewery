@@ -57,6 +57,6 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 $(document).ready(function() {
   $("#calculate-route").submit(function(event) {
     event.preventDefault();
-    calculateAndDisplayRoute($("#start").val(), $("#to").val());
+    calculateAndDisplayRoute($("#start").val(), $("#end").val());
   });
 });

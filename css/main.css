@@ -309,12 +309,33 @@ hr {
 	margin-bottom: 1em;
 }
 
+.back-to-top {
+	display: inline;
+	background: none;
+	margin: 0 2px 470px auto;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 99;
+	display: none;
+	text-decoration: none;
+}
+
+.glyphicon-triangle-top {
+	font-size: 1.25em;
+	color: #253037;
+}
+
 
 
 
 /* ==============================================
 		Footer Styles
 ============================================== */
+
+footer {
+	z-index: 200;
+}
 
 #main-footer {
 	color: #fff;
@@ -555,6 +576,17 @@ hr {
 /* ==============================================
 		Large Screen Sizes
 ============================================== */
+
+@media (min-width: 768px) {
+
+	.back-to-top {
+		margin: 0 30px 330px auto;
+	}
+
+	.glyphicon-triangle-top {
+		font-size: 2.75em;
+	}
+}
 
 @media (min-width: 991px) {
 
