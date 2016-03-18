@@ -313,6 +313,7 @@ hr {
 	display: inline;
 	background: none;
 	margin: 0 2px 470px auto;
+	padding: 5px;
 	position: fixed;
 	bottom: 0;
 	right: 0;
